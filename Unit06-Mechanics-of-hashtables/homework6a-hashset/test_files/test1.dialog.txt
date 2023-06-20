@@ -1,0 +1,16 @@
+--- Test 1 output ---
+
+set.insert(1) = ``true;insert-1;8``
+set.insert(2) = ``true;insert-2;8``
+set.insert(3) = ``true;insert-3;8``
+set.insert(4) = ``true;insert-4;8``
+set.insert(5) = ``true;insert-5;8``
+
+set.insert(1) = ``false;insert-6;8``
+set.insert(2) = ``false;insert-7;8``
+set.insert(3) = ``false;insert-8;8``
+set.insert(4) = ``false;insert-9;8``
+set.insert(5) = ``false;insert-10;8``
+
+set.insert(6) = ``true;insert-11;8``
+set.insert(6) = ``false;insert-12;8``

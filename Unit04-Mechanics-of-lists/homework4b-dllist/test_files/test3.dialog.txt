@@ -1,0 +1,27 @@
+--- Test 3 output ---
+
+list.front() ``threw a length_error exception;exception-thrown-1;8``
+list.back() ``threw a length_error exception;exception-thrown-2;8``
+
+list.push_front(2)
+list.front() = ``2;front-1;8``
+list.back() = ``2;back-1;8``
+list = ``2;list-1;3``
+
+list.push_back(5)
+list.push_back(8)
+list.front() = ``2;front-2;8``
+list.back() = ``8;back-2;8``
+list = ``2 5 8;list-2;3``
+
+list.insert(12, 3)
+list.back() = ``12;back-3;8``
+list.insert(4, 3)
+list.back() = ``12;back-4;8``
+list = ``2 5 8 4 12;list-3;3``
+
+list.insert(0, 0)
+list.front() = ``0;front-3;8``
+list.insert(3, 1)
+list.front() = ``0;front-4;8``
+list = ``0 3 2 5 8 4 12;list-4;3``

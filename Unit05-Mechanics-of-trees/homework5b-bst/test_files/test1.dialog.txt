@@ -1,0 +1,13 @@
+--- Test 1 output ---
+
+tree.insert(2) = ``true;insert-1;5``
+tree.insert(1) = ``true;insert-2;5``
+tree.insert(3) = ``true;insert-3;5``
+
+``   2
+
+ 1   3;tree;60``
+
+tree.insert(1) = ``false;insert-4;5``
+tree.insert(2) = ``false;insert-5;5``
+tree.insert(3) = ``false;insert-6;5``

@@ -1,0 +1,26 @@
+--- Test 7 output ---
+
+list = 15 14 11 15 20 19 11 5 14 3
+list.remove(3)
+
+list = ``15 14 11 20 19 11 5 14 3;list-1;12``
+list.remove(0)
+list.remove(0)
+list.remove(0)
+list.remove(5)
+list.remove(4)
+list.remove(3)
+
+list = ``20 19 11;list-2;12``
+list.remove(1)
+list = ``20 11;list-3;12``
+list.remove(1)
+list = ``20;list-4;12``
+list.remove(0)
+
+``list =;empty-list;12``
+list.front() ``threw a length_error exception;exception-thrown-1;6``
+list.back() ``threw a length_error exception;exception-thrown-2;6``
+list.pop_front() ``threw a length_error exception;exception-thrown-3;6``
+list.pop_back() ``threw a length_error exception;exception-thrown-4;6``
+list.at(3) ``threw an out_of_range exception;exception-thrown-5;6``

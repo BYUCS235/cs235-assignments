@@ -1,0 +1,9 @@
+operation: <<mod>>
+left operand: <<7>>
+right operand: <<4>>
+``3;answer-1;40``
+operation: <<mod>>
+left operand: <<100>>
+right operand: <<13>>
+``9;answer-2;40``
+operation: <<>>

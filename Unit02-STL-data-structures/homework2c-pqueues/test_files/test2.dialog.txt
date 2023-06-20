@@ -1,0 +1,28 @@
+What do you want to do? <<add>>
+Name: <<Rachel Martinez>>
+Priority: <<2>>
+What do you want to do? <<add>>
+Name: <<Ethan Hall>>
+Priority: <<0>>
+What do you want to do? <<add>>
+Name: <<Dylan Gray>>
+Priority: <<20>>
+What do you want to do? <<take>>
+``20 - Dylan Gray;take-1;15``
+What do you want to do? <<add>>
+Name: <<Samuel Young>>
+Priority: <<20>>
+What do you want to do? <<take>>
+``20 - Samuel Young;take-2;15``
+What do you want to do? <<take>>
+``02 - Rachel Martinez;take-3;15``
+What do you want to do? <<add>>
+Name: <<Christopher Wright>>
+Priority: <<1>>
+What do you want to do? <<take>>
+``01 - Christopher Wright;take-4;15``
+What do you want to do? <<take>>
+``00 - Ethan Hall;take-5;15``
+What do you want to do? <<take>>
+``There are no more people in line;take-6;15``
+What do you want to do? <<>>

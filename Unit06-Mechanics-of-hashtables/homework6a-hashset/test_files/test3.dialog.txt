@@ -1,0 +1,16 @@
+--- Test 3 output ---
+
+set.insert(quilt) = true
+set.insert(pineapple) = true
+set.insert(utopia) = true
+set.insert(unity) = true
+
+set.remove(quilt) = ``true;remove-1;10``
+set.remove(utopia) = ``true;remove-2;10``
+set.remove(seahorse) = ``false;remove-3;10``
+
+set.contains(quilt) = ``false;contains-1;12``
+set.contains(pineapple) = ``true;contains-2;12``
+set.contains(utopia) = ``false;contains-3;12``
+set.contains(unity) = ``true;contains-4;12``
+set.contains(seahorse) = ``false;contains-5;12``

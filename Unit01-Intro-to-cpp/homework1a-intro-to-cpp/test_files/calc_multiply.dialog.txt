@@ -1,0 +1,9 @@
+operation: <<multiply>>
+left operand: <<5>>
+right operand: <<2>>
+``10;answer-1;40``
+operation: <<multiply>>
+left operand: <<9>>
+right operand: <<-3>>
+``-27;answer-2;40``
+operation: <<>>

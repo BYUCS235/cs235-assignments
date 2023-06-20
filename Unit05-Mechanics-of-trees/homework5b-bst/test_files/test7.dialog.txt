@@ -1,0 +1,15 @@
+--- Test 7 output ---
+
+``       4
+
+   2       6
+
+ 1   3   5   7;tree-before;15``
+
+tree.remove(4) = ``true;remove-result;15``
+
+``       3
+
+   2       6
+
+ 1       5   7;tree-after;60``

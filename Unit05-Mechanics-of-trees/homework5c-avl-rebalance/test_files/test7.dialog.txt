@@ -1,0 +1,17 @@
+--- Test 7 output ---
+
+                     5|4
+
+         3|3                     6|1
+
+   1|2         4|1                        
+
+      2|1                                    
+
+rebalance(root)
+
+``         3|3
+
+   1|2         5|2
+
+      2|1   4|1   6|1;transformed-tree;90``

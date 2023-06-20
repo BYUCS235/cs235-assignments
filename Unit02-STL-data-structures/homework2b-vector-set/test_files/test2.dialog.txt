@@ -1,0 +1,14 @@
+--- Test 2 output ---
+
+set = {candle, chair, circle, donkey, dragon, guitar, spring}
+
+set.remove(spring) = ``true;remove-1;9``
+set.remove(donkey) = ``true;remove-2;9``
+set.remove(chair) = ``true;remove-3;9``
+set.remove(coffee) = ``false;remove-4;9``
+set.remove(guitar) = ``true;remove-5;9``
+set.remove(chair) = ``false;remove-6;9``
+set.remove(candle) = ``true;remove-7;9``
+set.remove(circle) = ``true;remove-8;9``
+set.remove(dragon) = ``true;remove-9;9``
+set.remove(guitar) = ``false;remove-10;9``

@@ -1,0 +1,14 @@
+--- Test 4 output ---
+
+set = {4, 6, 7, 15, 16, 19, 23, 29}
+set.size() = ``8;size-1;18``
+set.empty() = ``false;empty-1;18``
+
+set.clear()
+
+set.size() = ``0;size-2;18``
+set.empty() = ``true;empty-2;18``
+
+set.insert(4) = ``true;insert;6``
+set.size() = ``1;size-3;6``
+set.empty() = ``false;empty-3;6``

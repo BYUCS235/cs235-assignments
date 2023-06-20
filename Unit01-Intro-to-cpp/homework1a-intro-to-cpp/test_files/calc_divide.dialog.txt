@@ -1,0 +1,9 @@
+operation: <<divide>>
+left operand: <<21>>
+right operand: <<7>>
+``3;answer-1;40``
+operation: <<divide>>
+left operand: <<54>>
+right operand: <<-6>>
+``-9;answer-2;40``
+operation: <<>>

@@ -1,0 +1,20 @@
+--- Test 4 output ---
+
+list.at(0) ``threw an out_of_range exception;exception-thrown-1;11``
+list.push_front(apple)
+list.at(0) = ``apple;at-1;11``
+list.push_back(xylophone)
+list.push_front(honey)
+list.at(2) = ``xylophone;at-2;11``
+list.at(3) ``threw an out_of_range exception;exception-thrown-2;11``
+list = ``honey apple xylophone;list-1;4``
+
+list.insert(gratitude, 1)
+list.at(1) = ``gratitude;at-3;11``
+list.insert(nest, 4)
+list.at(4) = ``nest;at-4;11``
+list = ``honey gratitude apple xylophone nest;list-2;4``
+
+list.insert(utopia, 0)
+list.at(0) = ``utopia;at-5;11``
+list = ``utopia honey gratitude apple xylophone nest;list-3;4``

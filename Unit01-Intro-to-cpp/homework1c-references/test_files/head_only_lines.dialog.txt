@@ -1,0 +1,14 @@
+<<aaa
+bbbbb
+c
+dddddd
+eeeeee
+fffff
+gg>>
+``aaa;line-1;14``
+``bbbbb;line-2;14``
+``c;line-3;14``
+``dddddd;line-4;14``
+``eeeeee;line-5;14``
+``fffff;line-6;14``
+``gg;line-7;14``

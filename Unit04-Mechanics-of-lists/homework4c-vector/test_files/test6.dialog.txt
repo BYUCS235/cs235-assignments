@@ -1,0 +1,7 @@
+--- Test 6 output ---
+
+vector.push_back(0...499)
+assert vector[i] = i for all i 0...499
+
+vector.insert(500...999, 0)
+assert vector[i] = 999 - i for all i 0...499

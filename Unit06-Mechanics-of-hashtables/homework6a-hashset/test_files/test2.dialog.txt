@@ -1,0 +1,19 @@
+--- Test 2 output ---
+
+set.insert(2) = true
+set.insert(3) = true
+set.insert(4) = true
+set.insert(6) = true
+set.insert(7) = true
+set.insert(10) = true
+
+set.contains(1) = ``false;contains-1;9``
+set.contains(2) = ``true;contains-2;9``
+set.contains(3) = ``true;contains-3;9``
+set.contains(4) = ``true;contains-4;9``
+set.contains(5) = ``false;contains-5;9``
+set.contains(6) = ``true;contains-6;9``
+set.contains(7) = ``true;contains-7;9``
+set.contains(8) = ``false;contains-8;9``
+set.contains(9) = ``false;contains-9;9``
+set.contains(10) = ``true;contains-10;9``

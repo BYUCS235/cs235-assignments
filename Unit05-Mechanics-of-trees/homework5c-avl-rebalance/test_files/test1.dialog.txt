@@ -1,0 +1,11 @@
+--- Test 1 output ---
+
+   2|2
+
+1|1      
+
+promote_left(root)
+
+``   1|2
+
+      2|1;transformed-tree;90``

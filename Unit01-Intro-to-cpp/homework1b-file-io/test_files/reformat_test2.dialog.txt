@@ -1,0 +1,10 @@
+``Nguyen;last-1;3``, ``Peter;first-1;3``: ``83.6;result-1;3``
+``Davis;last-2;3``, ``Rachel;first-2;3``: ``109.2;result-2;3``
+``Wilson;last-3;3``, ``Samantha;first-3;3``: ``55.8;result-3;3``
+``Mitchell;last-4;3``, ``Thomas;first-4;3``: ``71;result-4;3``
+``Patel;last-5;3``, ``Uma;first-5;3``: ``48.45;result-5;3``
+``Lee;last-6;3``, ``Vivian;first-6;3``: ``145.6;result-6;3``
+``Garcia;last-7;3``, ``William;first-7;3``: ``94.8;result-7;3``
+``Hernandez;last-8;3``, ``Xavier;first-8;3``: ``123.2;result-8;3``
+``Kim;last-9;3``, ``Yvonne;first-9;3``: ``65.55;result-9;3``
+``Baker;last-10;3``, ``Zachary;first-10;3``: ``56.7;result-10;3``

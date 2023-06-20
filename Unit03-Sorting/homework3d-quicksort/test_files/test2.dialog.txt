@@ -1,0 +1,12 @@
+--- Test 2 output ---
+
+array = ``1 2 3 4 5 9 13 16 16 17;array-1;15``
+
+partition(array, 0, 4) = ``2;par-1;10``
+array = ``1 2 3 4 5 9 13 16 16 17;array-2;15``
+
+partition(array, 3, 9) = ``6;par-2;10``
+array = ``1 2 3 4 5 9 13 16 16 17;array-3;15``
+
+partition(array, 0, 9) = ``4;par-3;10``
+array = ``1 2 3 4 5 9 13 16 16 17;array-4;15``

@@ -1,0 +1,9 @@
+--- Test 5 output ---
+
+``   1
+
+     2;tree-before;15``
+
+tree.remove(1) = ``true;remove-result;15``
+
+`` 2;tree-after;60``

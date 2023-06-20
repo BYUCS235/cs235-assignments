@@ -1,0 +1,15 @@
+--- Test 6 output ---
+
+         5|3
+
+   3|2         8|2
+
+2|1         6|1   9|1
+
+rebalance(root)
+
+``         5|3
+
+   3|2         8|2
+
+2|1         6|1   9|1;transformed-tree;90``

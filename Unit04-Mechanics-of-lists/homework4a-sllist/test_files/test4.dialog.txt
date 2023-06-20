@@ -1,0 +1,18 @@
+--- Test 4 output ---
+
+list.size() = ``0;size-1;18``
+
+list.push_back(2)
+list.push_back(5)
+list.size() = ``2;size-2;18``
+
+list.pop_back()
+list.size() = ``1;size-3;18``
+
+list.clear()
+list.size() = ``0;size-4;18``
+
+list.push_back(6)
+list.push_back(7)
+list.push_back(9)
+list.size() = ``3;size-5;18``

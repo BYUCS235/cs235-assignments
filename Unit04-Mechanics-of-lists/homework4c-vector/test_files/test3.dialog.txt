@@ -1,0 +1,15 @@
+--- Test 3 output ---
+
+vector[0] ``threw an out_of_range exception;exception-thrown-1;15``
+vector.push_back(ice)
+vector.push_back(eggplant)
+vector.push_back(guitar)
+vector.push_back(narwhal)
+vector = ``ice eggplant guitar narwhal;vector-1;30``
+
+vector[0] <- jellyfish
+vector[1] <- zucchini
+vector[2] <- peace
+vector[3] <- serenity
+vector[4] ``threw an out_of_range exception;exception-thrown-2;15``
+vector = ``jellyfish zucchini peace serenity;vector-2;30``

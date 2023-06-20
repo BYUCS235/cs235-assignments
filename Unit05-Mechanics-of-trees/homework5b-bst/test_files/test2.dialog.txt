@@ -1,0 +1,20 @@
+--- Test 2 output ---
+
+tree.insert(9) = ``true;insert-1;4``
+tree.insert(5) = ``true;insert-2;4``
+tree.insert(2) = ``true;insert-3;4``
+tree.insert(4) = ``true;insert-4;4``
+tree.insert(3) = ``true;insert-5;4``
+tree.insert(11) = ``true;insert-6;4``
+tree.insert(10) = ``true;insert-7;4``
+tree.insert(12) = ``true;insert-8;4``
+
+``                               9
+
+               5                              11
+
+       2                              10              12
+
+           4                                                
+
+         3                                                    ;tree;58``

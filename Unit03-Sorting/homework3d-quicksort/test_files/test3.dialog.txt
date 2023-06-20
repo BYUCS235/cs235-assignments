@@ -1,0 +1,12 @@
+--- Test 3 output ---
+
+array = ``velvet pillow pillow ocean mountain coffee cascade bubble blossom bicycle;array-1;15``
+
+partition(array, 0, 4) = ``3;par-1;10``
+array = ``ocean pillow mountain pillow velvet coffee cascade bubble blossom bicycle;array-2;15``
+
+partition(array, 3, 9) = ``6;par-2;10``
+array = ``ocean pillow mountain bicycle blossom bubble cascade coffee velvet pillow;array-3;15``
+
+partition(array, 0, 9) = ``6;par-3;10``
+array = ``cascade coffee mountain bicycle blossom bubble ocean pillow velvet pillow;array-4;15``

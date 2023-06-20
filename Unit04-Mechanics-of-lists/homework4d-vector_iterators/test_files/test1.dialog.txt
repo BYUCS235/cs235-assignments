@@ -1,0 +1,6 @@
+--- Test 1 output ---
+
+vector = 1 2 3 4 5
+
+using for-each syntax to increment each element by 1...
+vector = ``2 3 4 5 6;transformed;90``

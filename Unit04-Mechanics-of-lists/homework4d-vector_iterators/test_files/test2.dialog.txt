@@ -1,0 +1,6 @@
+--- Test 2 output ---
+
+vector = waterfall enigma guitar zebra luminous
+
+using for-each syntax to make each element uppercase...
+vector = ``WATERFALL ENIGMA GUITAR ZEBRA LUMINOUS;transformed;90``

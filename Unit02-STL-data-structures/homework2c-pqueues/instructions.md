@@ -1,0 +1,42 @@
+# HW 2c
+
+## Priority Queues
+
+Write a priority queue program in `pqueues.cpp`.
+
+- You can assume the user always provides valid inputs
+  - e.g. the test will not enter non-numeric input when the program expects a number
+- Support `add` and `take` operations:
+  - `add` requires a `Name` and `Priority` input
+  - `take` will display the next person in line according to their priority
+    - Higher numbers indicate higher priority
+- Use a `std::priority_queue` to store the entries
+- The entries should include the assigned priority and name, separated by " - "
+- Pad priority numbers with a leading zero if they are in the range 0-9
+- An empty operation exits the program
+- Follow the formatting demonstrated in the example
+
+### Example
+
+```
+What do you want to do? add
+Name: Alice
+Priority: 3
+What do you want to do? add
+Name: Bob
+Priority: 10
+What do you want to do? add
+Name: Carol
+Priority: 1
+What do you want to do? take
+10 - Bob
+What do you want to do? take
+03 - Alice
+What do you want to do? asdf
+asdf isn't a valid operation
+What do you want to do? 
+```
+
+## Grading
+
+`pqueues.cpp` is worth 100 points.

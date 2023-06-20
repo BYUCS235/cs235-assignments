@@ -1,0 +1,13 @@
+--- Test 3 output ---
+
+``   2
+
+ 1   3;tree-before;15``
+
+tree.remove(1) = ``true;remove-1;10``
+
+``   2
+
+     3;tree-after;55``
+
+tree.remove(1) = ``false;remove-2;10``

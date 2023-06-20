@@ -1,0 +1,9 @@
+operation: <<add>>
+left operand: <<1>>
+right operand: <<2>>
+``3;answer-1;40``
+operation: <<add>>
+left operand: <<5>>
+right operand: <<-7>>
+``-2;answer-2;40``
+operation: <<>>

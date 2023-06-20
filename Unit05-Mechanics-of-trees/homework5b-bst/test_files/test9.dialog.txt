@@ -1,0 +1,18 @@
+--- Test 9 output ---
+
+       5
+
+   3       8
+
+ 2       6   9
+
+tree.contains(1) = ``false;contains-1;9``
+tree.contains(2) = ``true;contains-2;9``
+tree.contains(3) = ``true;contains-3;9``
+tree.contains(4) = ``false;contains-4;9``
+tree.contains(5) = ``true;contains-5;9``
+tree.contains(6) = ``true;contains-6;9``
+tree.contains(7) = ``false;contains-7;9``
+tree.contains(8) = ``true;contains-8;9``
+tree.contains(9) = ``true;contains-9;9``
+tree.contains(10) = ``false;contains-10;9``

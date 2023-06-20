@@ -1,0 +1,20 @@
+--- Test 2 output ---
+
+               2
+
+                       3
+
+                           6
+
+                             8
+
+find(root, 1) = ``false;find-1;9``
+find(root, 2) = ``true;find-2;9``
+find(root, 3) = ``true;find-3;9``
+find(root, 4) = ``false;find-4;9``
+find(root, 5) = ``false;find-5;9``
+find(root, 6) = ``true;find-6;9``
+find(root, 7) = ``false;find-7;9``
+find(root, 8) = ``true;find-8;9``
+find(root, 9) = ``false;find-9;9``
+find(root, 10) = ``false;find-10;9``
