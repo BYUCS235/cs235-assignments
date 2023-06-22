@@ -6,7 +6,7 @@ Implement a simple dynamically-allocated array in `Vector.h` with support for *f
 
 In addition to the functionality described in [HW 4c Vector](../homework4c-vector/instructions.md), this submission should:
 
-- Implement `begin()` and `end()` that return `iterator` objects for the first and one past the last elements
+- Implement `begin()` and `end()` that return `Iterator` objects for the first and one past the last elements
 - Implement the `Iterator` class with 
   - `operator*()` - retrieve the value of the current item
   - `operator++()` - advance to the next item

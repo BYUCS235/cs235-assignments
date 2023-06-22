@@ -1,3 +1,4 @@
+#include <cstring>
 #include <initializer_list>
 #include <iostream>
 #include <sstream>
@@ -6,6 +7,8 @@
 
 #include "find.h"
 #include "printing.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 Node* build_tree(std::initializer_list<int> flat_tree_vals) {
     std::vector<Node*> flat_tree;
@@ -53,6 +56,9 @@ void noisy_find(Node* root, int item) {
     std::cout << "find(root, " << item << ") = " << std::boolalpha << find(root, item) << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that find works with an empty tree
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -73,6 +79,7 @@ void test1() {
     noisy_find(tree, 10);
 }
 
+// Checks that find works with a single line to the right
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -93,6 +100,7 @@ void test2() {
     noisy_find(tree, 10);
 }
 
+// Checks that find works with a single line to the left
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -113,6 +121,7 @@ void test3() {
     noisy_find(tree, 10);
 }
 
+// Checks that find works with a balanced tree
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 

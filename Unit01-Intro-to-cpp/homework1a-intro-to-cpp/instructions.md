@@ -9,6 +9,7 @@ Write a calculator program in `calculator.cpp`.
   - You won't be asked to divide or mod by zero
 - Support `add`, `subtract`, `multiply`, `divide`, and `mod` (modulus) operations
   - Each of these operations takes a `left operand` and `right operand`
+- The program should exit when given an empty operation
 - Follow the formatting demonstrated in the example
 
 **Example**

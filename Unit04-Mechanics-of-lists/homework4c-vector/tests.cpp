@@ -1,8 +1,11 @@
+#include <cstring>
 #include <iostream>
 #include <stdexcept>
 #include <string>
 
 #include "Vector.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 template<class T>
 void noisy_push_back(Vector<T>& vector, T item) {
@@ -78,6 +81,12 @@ void print_vector(Vector<T>& vector) {
     std::cout << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// NOTE: all tests will require operator[] and size to be implemented (so that
+// they can print the vector)
+
+// Checks that push_back works
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -98,6 +107,7 @@ void test1() {
     print_vector(vector);
 }
 
+// Checks that insert works
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -122,6 +132,7 @@ void test2() {
     print_vector(vector);
 }
 
+// Checks that operator[] works for writing into the vector
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -144,6 +155,7 @@ void test3() {
     print_vector(vector);
 }
 
+// Checks that remove works
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 
@@ -175,6 +187,7 @@ void test4() {
     print_vector(vector);
 }
 
+// Checks that size and clear work
 void test5() {
     std::cout << "--- Test 5 output ---\n" << std::endl;
 
@@ -206,6 +219,8 @@ void test5() {
     noisy_size(vector);
 }
 
+// Throws lots of stuff at the vector to make sure that growing doesn't crash
+// and burn (but that it DOES grow rather than segfaulting)
 void test6() {
     std::cout << "--- Test 6 output ---\n" << std::endl;
 

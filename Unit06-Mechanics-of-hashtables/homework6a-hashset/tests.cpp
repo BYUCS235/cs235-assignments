@@ -1,7 +1,10 @@
+#include <cstring>
 #include <iostream>
 #include <string>
 
 #include "HashSet.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 template<class T>
 void noisy_insert(HashSet<T>& set, T item) {
@@ -29,6 +32,9 @@ void noisy_size(const HashSet<T>& set) {
     std::cout << "set.size() = " << set.size() << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that insert works
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -52,6 +58,7 @@ void test1() {
     noisy_insert(set, 6);
 }
 
+// Checks that contains works
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -77,6 +84,7 @@ void test2() {
     noisy_contains(set, 10);
 }
 
+// Checks that remove works
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -100,6 +108,7 @@ void test3() {
     noisy_contains<std::string>(set, "seahorse");
 }
 
+// Checks that size and clear work
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 
@@ -143,6 +152,8 @@ void test4() {
     noisy_contains<std::string>(set, "violin");
 }
 
+// Throws lots of stuff at the hash set to make sure that rehashing doesn't
+// crash and burn
 void test5() {
     std::cout << "--- Test 5 output ---\n" << std::endl;
 

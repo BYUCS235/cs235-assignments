@@ -1,8 +1,11 @@
+#include <cstring>
 #include <iostream>
 #include <stdexcept>
 #include <string>
 
 #include "DLList.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 template<class T>
 void noisy_push_front(DLList<T>& list, T item) {
@@ -127,6 +130,9 @@ void print_list(const DLList<T>& list) {
     std::cout << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that push_front and push_back work
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -153,6 +159,7 @@ void test1() {
     print_list(list);
 }
 
+// Checks that insert works
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -177,6 +184,7 @@ void test2() {
     print_list(list);
 }
 
+// Checks that front and back work
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -217,6 +225,7 @@ void test3() {
     print_list(list);
 }
 
+// Checks that at works
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 
@@ -246,6 +255,7 @@ void test4() {
     print_list(list);
 }
 
+// Checks that contains works
 void test5() {
     std::cout << "--- Test 5 output ---\n" << std::endl;
 
@@ -273,6 +283,7 @@ void test5() {
     noisy_contains(list, 10);
 }
 
+// Checks that pop_front and pop_back work
 void test6() {
     std::cout << "--- Test 6 output ---\n" << std::endl;
 
@@ -302,6 +313,7 @@ void test6() {
     noisy_pop_front(list);
 }
 
+// Checks that remove works
 void test7() {
     std::cout << "--- Test 7 output ---\n" << std::endl;
 
@@ -350,6 +362,7 @@ void test7() {
     noisy_at(list, 3);
 }
 
+// Checks that size and clear work
 void test8() {
     std::cout << "--- Test 8 output ---\n" << std::endl;
 

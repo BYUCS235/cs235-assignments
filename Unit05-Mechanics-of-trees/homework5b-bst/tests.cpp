@@ -1,8 +1,11 @@
+#include <cstring>
 #include <iostream>
 #include <string>
 
 #include "BST.h"
 #include "printing.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 void noisy_insert(BST<int>& tree, int item) {
     std::cout << "tree.insert(" << item << ") = " << std::boolalpha << tree.insert(item) << std::endl;
@@ -25,6 +28,9 @@ void noisy_size(const BST<int>& tree) {
     std::cout << "tree.size() = " << tree.size() << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that insert works to build a simple tree
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -43,6 +49,7 @@ void test1() {
     noisy_insert(tree, 3);
 }
 
+// Checks that insert works to build up a more complex tree
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -61,6 +68,7 @@ void test2() {
     pretty_print_tree(tree);
 }
 
+// Checks that remove works with a leaf node
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -82,6 +90,7 @@ void test3() {
     noisy_remove(tree, 1);
 }
 
+// Checks that remove works with a node that only has a left child
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 
@@ -99,6 +108,7 @@ void test4() {
     pretty_print_tree(tree);
 }
 
+// Checks that remove works with a node that only has a right child
 void test5() {
     std::cout << "--- Test 5 output ---\n" << std::endl;
 
@@ -116,6 +126,8 @@ void test5() {
     pretty_print_tree(tree);
 }
 
+// Checks that remove works with a node that has two children where the inorder
+// predecessor is the node's left child
 void test6() {
     std::cout << "--- Test 6 output ---\n" << std::endl;
 
@@ -134,6 +146,8 @@ void test6() {
     pretty_print_tree(tree);
 }
 
+// Checks that remove works with a node that has two children where the node's
+// left child has a right subtree
 void test7() {
     std::cout << "--- Test 7 output ---\n" << std::endl;
 
@@ -156,6 +170,8 @@ void test7() {
     pretty_print_tree(tree);
 }
 
+// Checks that remove works by repeatedly removing the root node until the tree
+// is empty
 void test8() {
     std::cout << "--- Test 8 output ---\n" << std::endl;
 
@@ -184,6 +200,7 @@ void test8() {
     pretty_print_tree(tree);
 }
 
+// Checks that contains works
 void test9() {
     std::cout << "--- Test 9 output ---\n" << std::endl;
 
@@ -212,6 +229,7 @@ void test9() {
     noisy_contains(tree, 10);
 }
 
+// Checks that size and clear work
 void test10() {
     std::cout << "--- Test 10 output ---\n" << std::endl;
 

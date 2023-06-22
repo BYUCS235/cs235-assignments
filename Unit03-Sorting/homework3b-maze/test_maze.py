@@ -3,11 +3,13 @@ import pytest
 import subprocess as sp
 
 
+# This compiles maze.cpp for all the tests to use
 @pytest.fixture(scope='module')
 def maze_bin():
     return compile_cpp('maze.cpp', output_exec='maze')
 
 
+# This checks that a solution to a maze is valid
 def check_solution(maze_file, solution_file):
     with open(maze_file) as file:
         R, C, D = (int(dim) for dim in file.readline().split())
@@ -34,6 +36,7 @@ def check_solution(maze_file, solution_file):
                         1), f'[Line {len(path) + 1}]: the solution must end at {R-1} {C-1} {D-1}'
 
 
+# This test checks maze's solution to solvable1.maze.txt
 @max_score(15)
 def test_solvable1(maze_bin):
     sp.run([maze_bin, test_files / 'solvable1.maze.txt',
@@ -41,6 +44,7 @@ def test_solvable1(maze_bin):
     check_solution(test_files / 'solvable1.maze.txt', 'solvable1.solution.txt')
 
 
+# This test checks maze's solution to solvable2.maze.txt
 @max_score(15)
 def test_solvable2(maze_bin):
     sp.run([maze_bin, test_files / 'solvable2.maze.txt',
@@ -48,6 +52,7 @@ def test_solvable2(maze_bin):
     check_solution(test_files / 'solvable2.maze.txt', 'solvable2.solution.txt')
 
 
+# This test checks maze's solution to solvable3.maze.txt
 @max_score(20)
 def test_solvable3(maze_bin):
     sp.run([maze_bin, test_files / 'solvable3.maze.txt',
@@ -55,6 +60,7 @@ def test_solvable3(maze_bin):
     check_solution(test_files / 'solvable3.maze.txt', 'solvable3.solution.txt')
 
 
+# This test checks that maze sees that unsolvable1.maze.txt has no solution
 @max_score(15)
 def test_unsolvable1(maze_bin):
     sp.run([maze_bin, test_files / 'unsolvable1.maze.txt',
@@ -63,6 +69,7 @@ def test_unsolvable1(maze_bin):
         assert fin.read().strip() == 'NO SOLUTION'
 
 
+# This test checks that maze sees that unsolvable2.maze.txt has no solution
 @max_score(15)
 def test_unsolvable2(maze_bin):
     sp.run([maze_bin, test_files / 'unsolvable2.maze.txt',
@@ -71,6 +78,7 @@ def test_unsolvable2(maze_bin):
         assert fin.read().strip() == 'NO SOLUTION'
 
 
+# This test checks that maze sees that unsolvable3.maze.txt has no solution
 @max_score(20)
 def test_unsolvable3(maze_bin):
     sp.run([maze_bin, test_files / 'unsolvable3.maze.txt',

@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cstring>
 #include <initializer_list>
 #include <iostream>
 #include <sstream>
@@ -7,6 +8,8 @@
 
 #include "rebalance.h"
 #include "printing.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 Node* build_tree(std::initializer_list<int> flat_tree_vals) {
     std::vector<Node*> flat_tree;
@@ -93,6 +96,9 @@ void noisy_rebalance(Node*& root) {
     std::cout << "rebalance(root)" << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that promote_left works with two nodes in the tree
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -106,6 +112,7 @@ void test1() {
     pretty_print_tree(root);
 }
 
+// Checks that promote_left works with a bigger tree
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -119,6 +126,7 @@ void test2() {
     pretty_print_tree(root);
 }
 
+// Checks that promote_right works with two nodes in the tree
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -132,6 +140,7 @@ void test3() {
     pretty_print_tree(root);
 }
 
+// Checks that promote_right works with a bigger tree
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 
@@ -145,6 +154,7 @@ void test4() {
     pretty_print_tree(root);
 }
 
+// Checks that rebalance works with a leaf node
 void test5() {
     std::cout << "--- Test 5 output ---\n" << std::endl;
 
@@ -158,6 +168,7 @@ void test5() {
     pretty_print_tree(root);
 }
 
+// Checks that rebalance works with a balanced tree
 void test6() {
     std::cout << "--- Test 6 output ---\n" << std::endl;
 
@@ -171,6 +182,7 @@ void test6() {
     pretty_print_tree(root);
 }
 
+// Checks that rebalance works with a LL imbalance
 void test7() {
     std::cout << "--- Test 7 output ---\n" << std::endl;
 
@@ -184,6 +196,7 @@ void test7() {
     pretty_print_tree(root);
 }
 
+// Checks that rebalance works with a RR imbalance
 void test8() {
     std::cout << "--- Test 8 output ---\n" << std::endl;
 
@@ -197,6 +210,7 @@ void test8() {
     pretty_print_tree(root);
 }
 
+// Checks that rebalance works with a LR imbalance
 void test9() {
     std::cout << "--- Test 9 output ---\n" << std::endl;
 
@@ -210,6 +224,7 @@ void test9() {
     pretty_print_tree(root);
 }
 
+// Checks that rebalance works with a RL imbalance
 void test10() {
     std::cout << "--- Test 10 output ---\n" << std::endl;
 

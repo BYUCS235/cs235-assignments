@@ -12,7 +12,7 @@ Create a `Vector` class in `Vector.h`.
   - `T& operator[](int index)`: Access the item at the given index, without bounds checking
   - `int size() const`: Return the number of elements in the vector
   - `void clear()`: Clear the vector, making it empty
-- The class should automatically resize when necessary, with an initial capacity of 8 elements and doubling in size when full
+- The class should automatically resize when necessary
 - `insert`, `remove`, and `operator[]` should throw an `std::out_of_range` if the index is out of range
 
 **Note**
@@ -20,13 +20,5 @@ Create a `Vector` class in `Vector.h`.
 All tests will require `operator[]` and `size` to be implemented so that the vector can be printed. 
 
 ## Grading
-
-### Tests
-* Test 1 - `push_back`
-* Test 2 - `insert`
-* Test 3 - `operator[]` (writing into the vector)
-* Test 4 - `remove`
-* Test 5 - `size` and `clear`
-* Test 6 - throwing lots of stuff at the vector (to make sure that the growing functionality doesn't blow up)
 
 `Vector.h` is worth 100 points.

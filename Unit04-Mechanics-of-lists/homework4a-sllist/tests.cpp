@@ -1,8 +1,11 @@
+#include <cstring>
 #include <initializer_list>
 #include <iostream>
 #include <string>
 
 #include "SLList.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 template<class T>
 void noisy_push_back(SLList<T>& list, T item) {
@@ -43,6 +46,9 @@ void print_list(const SLList<T>& list) {
     std::cout << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that push_back works
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -68,6 +74,7 @@ void test1() {
     print_list(list);
 }
 
+// Checks that pop_back works
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -101,6 +108,7 @@ void test2() {
     print_list(list);
 }
 
+// Checks that front works
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -122,6 +130,7 @@ void test3() {
     noisy_front(list);
 }
 
+// Checks that size and clear work
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 

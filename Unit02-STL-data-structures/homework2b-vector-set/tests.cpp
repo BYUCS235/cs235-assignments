@@ -1,7 +1,10 @@
+#include <cstring>
 #include <iostream>
 #include <string>
 
-#include "vector_set.h"
+#include "VectorSet.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 template<class T>
 void noisy_contains(VectorSet<T>& set, T item) {
@@ -34,6 +37,9 @@ void noisy_clear(VectorSet<T>& set) {
     set.clear();
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that insert and contains work
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -52,6 +58,7 @@ void test1() {
     }
 }
 
+// Checks that remove works
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -80,6 +87,7 @@ void test2() {
     noisy_remove<std::string>(set, "guitar");
 }
 
+// Checks that empty and size work
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -126,6 +134,7 @@ void test3() {
     noisy_empty(set);
 }
 
+// Checks that clear works
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 

@@ -1,6 +1,9 @@
 from byu_pytest_utils import cache, compile_cpp, dialog_exec, max_score, test_files
 
 
+# This compiles tests.cpp for all the tests to use
+#
+# See tests.cpp for a description of which functionality each test exercises
 @cache
 def linked_list_bin():
     return compile_cpp('*.cpp', output_exec='linked_list')

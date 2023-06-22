@@ -1,8 +1,11 @@
+#include <cstring>
 #include <iostream>
 #include <string>
 
 #include "AVL.h"
 #include "printing.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 void noisy_insert(AVL<int>& tree, int item) {
     std::cout << "tree.insert(" << item << ") = " << std::boolalpha << tree.insert(item) << std::endl;
@@ -31,6 +34,9 @@ void noisy_size(const AVL<int>& tree) {
     std::cout << "tree.size() = " << tree.size() << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that insert works with a small tree that has a RR imbalance
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -51,6 +57,7 @@ void test1() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a small tree that has a LL imbalance
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -71,6 +78,7 @@ void test2() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a small subtree that has a LL imbalance
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -89,6 +97,7 @@ void test3() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a small subtree that has a LR imbalance
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 
@@ -106,6 +115,7 @@ void test4() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a small subtree that has a RR imbalance
 void test5() {
     std::cout << "--- Test 5 output ---\n" << std::endl;
 
@@ -123,6 +133,7 @@ void test5() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a small subtree that has a RL imbalance
 void test6() {
     std::cout << "--- Test 6 output ---\n" << std::endl;
 
@@ -140,6 +151,7 @@ void test6() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a big tree that has a RR imbalance
 void test7() {
     std::cout << "--- Test 7 output ---\n" << std::endl;
 
@@ -164,6 +176,7 @@ void test7() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a big tree that has a RL imbalance
 void test8() {
     std::cout << "--- Test 8 output ---\n" << std::endl;
 
@@ -188,6 +201,7 @@ void test8() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a big tree that has a LL imbalance
 void test9() {
     std::cout << "--- Test 9 output ---\n" << std::endl;
 
@@ -212,6 +226,7 @@ void test9() {
     pretty_print_tree(tree);
 }
 
+// Checks that insert works with a big tree that has a LR imbalance
 void test10() {
     std::cout << "--- Test 10 output ---\n" << std::endl;
 
@@ -236,6 +251,7 @@ void test10() {
     pretty_print_tree(tree);
 }
 
+// Checks that contains works
 void test11() {
     std::cout << "--- Test 11 output ---\n" << std::endl;
 
@@ -269,6 +285,7 @@ void test11() {
     noisy_contains(tree, 35);
 }
 
+// Checks that remove works with tree that has a LL imbalance
 void test12() {
     std::cout << "--- Test 12 output ---\n" << std::endl;
 
@@ -290,6 +307,7 @@ void test12() {
     pretty_print_tree(tree);
 }
 
+// Checks that remove works with tree that has a LR imbalance
 void test13() {
     std::cout << "--- Test 13 output ---\n" << std::endl;
 
@@ -311,6 +329,7 @@ void test13() {
     pretty_print_tree(tree);
 }
 
+// Checks that remove works with tree that has a RL imbalance
 void test14() {
     std::cout << "--- Test 14 output ---\n" << std::endl;
 
@@ -332,6 +351,7 @@ void test14() {
     pretty_print_tree(tree);
 }
 
+// Checks that remove works with tree that has a RR imbalance
 void test15() {
     std::cout << "--- Test 15 output ---\n" << std::endl;
 
@@ -353,6 +373,7 @@ void test15() {
     pretty_print_tree(tree);
 }
 
+// Stress tests remove by repeatedly removing the root node
 void test16() {
     std::cout << "--- Test 16 output ---\n" << std::endl;
 
@@ -401,6 +422,7 @@ void test16() {
     noisy_size(tree);
 }
 
+// Checks that insert works after calling remove
 void test17() {
     std::cout << "--- Test 17 output ---\n" << std::endl;
 
@@ -426,6 +448,7 @@ void test17() {
     pretty_print_tree(tree);
 }
 
+// Checks that size and clear work
 void test18() {
     std::cout << "--- Test 18 output ---\n" << std::endl;
 

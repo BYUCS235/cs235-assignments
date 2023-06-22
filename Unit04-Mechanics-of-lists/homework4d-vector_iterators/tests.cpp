@@ -1,8 +1,11 @@
+#include <cstring>
 #include <algorithm>
 #include <iostream>
 #include <string>
 
 #include "Vector.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 template<class T>
 void print_vector(Vector<T>& vector) {
@@ -13,6 +16,10 @@ void print_vector(Vector<T>& vector) {
     std::cout << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Iterates over a vector of integers using for-each syntax, adding 1 to each
+// integer
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -33,6 +40,8 @@ void test1() {
     print_vector(vector);
 }
 
+// Iterates over a vector of strings using for-each syntax, uppercasing each
+// string
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 

@@ -1,8 +1,11 @@
+#include <cstring>
 #include <iostream>
 #include <string>
 #include <vector>
 
 #include "QS.h"
+
+// --------- HELPER FUNCTIONS --------- 
 
 template<class T>
 std::ostream& operator<<(std::ostream& os, const std::vector<T>& array) {
@@ -41,6 +44,9 @@ void noisy_sort(std::vector<T>& array) {
     std::cout << "array = " << array << std::endl;
 }
 
+// --------- END HELPER FUNCTIONS --------- 
+
+// Checks that medianOfThree works
 void test1() {
     std::cout << "--- Test 1 output ---\n" << std::endl;
 
@@ -55,6 +61,7 @@ void test1() {
     noisy_medianOfThree(array, 2, 4);
 }
 
+// Checks that partition works with sorted data
 void test2() {
     std::cout << "--- Test 2 output ---\n" << std::endl;
 
@@ -66,6 +73,7 @@ void test2() {
     noisy_partition(array, 0, 9);
 }
 
+// Checks that partition works with reversed data
 void test3() {
     std::cout << "--- Test 3 output ---\n" << std::endl;
 
@@ -77,6 +85,7 @@ void test3() {
     noisy_partition(array, 0, 9);
 }
 
+// Checks that partition works with shuffled data
 void test4() {
     std::cout << "--- Test 4 output ---\n" << std::endl;
 
@@ -88,6 +97,7 @@ void test4() {
     noisy_partition(array, 0, 9);
 }
 
+// Checks that sort works with sorted data
 void test5() {
     std::cout << "--- Test 5 output ---\n" << std::endl;
 
@@ -95,6 +105,7 @@ void test5() {
     noisy_sort(array);
 }
 
+// Checks that sort works with reversed data
 void test6() {
     std::cout << "--- Test 6 output ---\n" << std::endl;
 
@@ -102,6 +113,7 @@ void test6() {
     noisy_sort(array);
 }
 
+// Checks that sort works with shuffled data
 void test7() {
     std::cout << "--- Test 7 output ---\n" << std::endl;
 
