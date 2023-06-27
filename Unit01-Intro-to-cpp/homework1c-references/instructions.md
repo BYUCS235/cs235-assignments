@@ -25,6 +25,7 @@ aaa aba zzz
 Write a `head` program in `head.cpp`.
 
 - The `head` program should read the first `n` lines of a file or standard input
+  - If `n` isn't provided, print 10 lines
   - If no file is provided, read from standard input
 - If the input file does not exist, the program should print an error message and exit
 - If more lines are requested than the input file has, the program should just print the entire file
