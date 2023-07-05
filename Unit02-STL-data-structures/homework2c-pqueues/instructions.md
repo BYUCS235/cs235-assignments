@@ -10,6 +10,7 @@ Write a priority queue program in `pqueues.cpp`.
   - `add` requires a `Name` and `Priority` input
   - `take` will display the next person in line according to their priority
     - Higher numbers indicate higher priority
+    - If nobody is in the queue, print `There are no more people in line`
 - Use a `std::priority_queue` to store the entries
 - The entries should include the assigned priority and name, separated by " - "
 - Pad priority numbers with a leading zero if they are in the range 0-9
@@ -32,6 +33,10 @@ What do you want to do? take
 10 - Bob
 What do you want to do? take
 03 - Alice
+What do you want to do? take
+01 - Carol
+What do you want to do? take
+There are no more people in line
 What do you want to do? asdf
 asdf isn't a valid operation
 What do you want to do? 
