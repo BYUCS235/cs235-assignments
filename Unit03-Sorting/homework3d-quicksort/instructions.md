@@ -16,8 +16,8 @@ Write a quicksort algorithm in `QS.h`.
 `medianOfThree`'s purpose is to make it less likely for the algorithm to choose
 a bad pivot. To do this, it:
 
-1. Calculates the index in between `left` and `right`: $middle = \frac{left +
-   right}{2}$
+1. Calculates the index in between `left` and `right`:
+   $middle = \frac{left + right}{2}$
 2. Sorts the values at `left`, `middle`, and `right`
 
 It then returns `middle`, which will be the index of the pivot that `partition`
