@@ -39,6 +39,7 @@ Johnson, Bob: 10
 Write a program in `longest_line.cpp` that reads an input file, and outputs the line containing the largest number of words.
 
 - You will receive a file name as a command line argument
+- you will std::cout the output
   - `argc` will always be 2
 - You can assume spaces are always used to separate words
 - You can assume words have no punctuation
