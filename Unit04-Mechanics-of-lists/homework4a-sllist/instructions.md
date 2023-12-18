@@ -20,6 +20,22 @@ Create a singly linked list template class `SLList` in `SLList.h`.
 - You can assume that `pop_back` and `front` will only be called when the list is not empty
 - Do not use any existing C++ data structures (e.g., `std::list`, `std::vector`)
 
+## Using provided tests.cpp file
+
+The following example will run the first automatic test:
+```
+g++ tests.cpp -o tests
+./tests 1
+```
+**The possible tests for this assignment are 1, 2, 3, 4, or all.**
+
+### A guide to what new functions each of the tests call:
+* Test 1: `push_back()`
+* Test 2: `pop_back()`
+* Test 3: `front()`
+* Test 4: `size()` and `clear()`
+* all: runs tests 1-4
+
 ## Grading
 
 `SLList.h` is worth 100 points.

@@ -1,0 +1,46 @@
+{
+    "tests": [
+        {
+            "score": 15,
+            "max_score": 15,
+            "name": "test_maze.py::test_solvable1",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 15,
+            "max_score": 15,
+            "name": "test_maze.py::test_solvable2",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 20,
+            "max_score": 20,
+            "name": "test_maze.py::test_solvable3",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 15,
+            "max_score": 15,
+            "name": "test_maze.py::test_unsolvable1",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 15,
+            "max_score": 15,
+            "name": "test_maze.py::test_unsolvable2",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 20,
+            "max_score": 20,
+            "name": "test_maze.py::test_unsolvable3",
+            "output": "\n",
+            "visibility": "visible"
+        }
+    ]
+}

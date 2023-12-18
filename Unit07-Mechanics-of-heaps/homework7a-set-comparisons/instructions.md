@@ -13,6 +13,10 @@ of sets: a vector set, a binary search tree (BST), an AVL tree, and a hash set.
 You will compare the runtime of inserting different amounts of elements into
 your sets and the sets provided in the C++ standard library.
 
+After you compute the runtimes of your various set implementations, 
+you will meet with another student in class to compare results. 
+Compare your runtimes and implementations. 
+
 ## Setting up
 
 Copy your completed `VectorSet.h`, `BST.h`, `AVL.h`, and `HashSet.h` files into
@@ -110,9 +114,9 @@ set.insert(i);
 Choose whether to insert sequential or random data by uncommenting the
 appropriate line. Remember to recompile after modifying `main.cpp`!
 
-## Wrapping up
+## Comparing Results
 
-Now that you've collected these data, consider the following questions:
+Now that you've collected these data, meet with another student from the course to discuss the following questions:
 
 1.  Based on the times you recorded, what is the Big-Oh of `insert` for each of
     these six implementations of sets?

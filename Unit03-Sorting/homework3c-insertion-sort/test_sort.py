@@ -41,7 +41,7 @@ def test_3_shuffled():
 @max_score(25)
 @dialog_exec(
     test_files / 'test4.dialog.txt', sort_bin,
-    close_stdin_after_all_inputs_given=True
+    read_timeout=1
 )
 def test_4_stdin():
     ...

@@ -4,7 +4,7 @@
 
 Create a class template called `VectorSet` in the header file named `VectorSet.h`.
 
-- `VectorSet` should store elements in a `std::vector<T>`
+- **`VectorSet` should store elements in a `std::vector<T>`**
 - Your class should provide the following public member functions:
   - `bool contains(T item) const`
     - Returns true if the `item` is in the set, and false otherwise

@@ -1,0 +1,39 @@
+{
+    "tests": [
+        {
+            "score": 25.0,
+            "max_score": 25.0,
+            "name": "test_sort.py::test_1_already_sorted[everything-else]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 25.0,
+            "max_score": 25.0,
+            "name": "test_sort.py::test_2_reversed[everything-else]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 25.0,
+            "max_score": 25.0,
+            "name": "test_sort.py::test_3_shuffled[everything-else]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.5,
+            "max_score": 2.5,
+            "name": "test_sort.py::test_4_stdin[everything-else]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 22.5,
+            "max_score": 22.5,
+            "name": "test_sort.py::test_4_stdin[sorted-lines]",
+            "output": "\n",
+            "visibility": "visible"
+        }
+    ]
+}

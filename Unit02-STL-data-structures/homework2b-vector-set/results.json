@@ -1,0 +1,382 @@
+{
+    "tests": [
+        {
+            "score": 5.0,
+            "max_score": 5.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[everything-else]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[insert-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[insert-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[insert-3]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[insert-4]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[insert-5]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-3]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-4]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-5]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-6]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-7]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-8]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-9]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.0,
+            "max_score": 1.0,
+            "name": "test_vector_set.py::test_1_insert_and_contains[contains-10]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.5,
+            "max_score": 2.5,
+            "name": "test_vector_set.py::test_2_remove[everything-else]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-3]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-4]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-5]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-6]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-7]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-8]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-9]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.25,
+            "max_score": 2.25,
+            "name": "test_vector_set.py::test_2_remove[remove-10]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.5,
+            "max_score": 2.5,
+            "name": "test_vector_set.py::test_3_empty_and_size[everything-else]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.0,
+            "max_score": 4.0,
+            "name": "test_vector_set.py::test_3_empty_and_size[empty-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[insert-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[insert-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_3_empty_and_size[size-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[insert-3]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_3_empty_and_size[size-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[insert-4]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_3_empty_and_size[size-3]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[remove-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[remove-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_3_empty_and_size[size-4]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[insert-5]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_3_empty_and_size[size-5]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[remove-3]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[remove-4]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 0.25,
+            "max_score": 0.25,
+            "name": "test_vector_set.py::test_3_empty_and_size[remove-5]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.0,
+            "max_score": 2.0,
+            "name": "test_vector_set.py::test_3_empty_and_size[size-6]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.0,
+            "max_score": 4.0,
+            "name": "test_vector_set.py::test_3_empty_and_size[empty-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 2.5,
+            "max_score": 2.5,
+            "name": "test_vector_set.py::test_4_clear[everything-else]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.5,
+            "max_score": 4.5,
+            "name": "test_vector_set.py::test_4_clear[size-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.5,
+            "max_score": 4.5,
+            "name": "test_vector_set.py::test_4_clear[empty-1]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.5,
+            "max_score": 4.5,
+            "name": "test_vector_set.py::test_4_clear[size-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 4.5,
+            "max_score": 4.5,
+            "name": "test_vector_set.py::test_4_clear[empty-2]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.5,
+            "max_score": 1.5,
+            "name": "test_vector_set.py::test_4_clear[insert]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.5,
+            "max_score": 1.5,
+            "name": "test_vector_set.py::test_4_clear[size-3]",
+            "output": "\n",
+            "visibility": "visible"
+        },
+        {
+            "score": 1.5,
+            "max_score": 1.5,
+            "name": "test_vector_set.py::test_4_clear[empty-3]",
+            "output": "\n",
+            "visibility": "visible"
+        }
+    ]
+}

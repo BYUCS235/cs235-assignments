@@ -27,13 +27,18 @@ apple
 banana
 ``` 
 
-Or using `stdin`...
+Using `stdin` (`stdin` lines appear in italics):
 
 ```
-$ echo -e "apple\norange\nbanana\napple\norange" | ./uniq
+$ ./uniq
+*apple*
 apple
+*orange*
 orange
+*apple*
+*banana*
 banana
+*orange*
 ```
 
 ## Grading

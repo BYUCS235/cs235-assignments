@@ -21,16 +21,26 @@ grape
 
 **Usage**
 
+**Input file**
 ```
-$ cat input.txt | ./sort
-apple
-banana
-grape
 $ ./sort input.txt
 apple
 banana
 grape
 ```
+
+**Stdin**
+Input from stdin is italicized
+<pre>
+$ ./sort
+<em>banana</em>
+<em>apple</em>
+<em>grape</em>
+apple
+banana
+grape
+
+</pre>
 
 ## Grading
 
