@@ -126,7 +126,8 @@ SOLUTION
 
 ## Managing the 3D maze structure
 
-Use the provided `Grid` class to manage the 3D maze in memory. You can read <a href="https://github.com/BYUCS235/cs235-assignments/blob/main/Unit03-Sorting/homework3b-maze/Grid.h>
+Use the provided `Grid` class to manage the 3D maze in memory. You can read 
+[grid.h](https://github.com/BYUCS235/cs235-assignments/blob/main/Unit03-Sorting/homework3b-maze/Grid.h)
 Grid.h</a> for more details on how to use it, but its
 basic usage looks like this:
 ```maze.cpp
