@@ -45,7 +45,8 @@ The maze solution will always start at `(0, 0, 0)` and end at `(n_rows-1,
 n_columns-1, n_levels-1)` (i.e. the opposite corner of the maze).
 
 ### Implementing the Lab
-You should implement this lab using **recursion**. There is an old <a href=https://youtu.be/IzNTe-8Vw14?si=-qzY0dmMGLi5mBss&t=213>video</a> 
+You should implement this lab using **recursion**. There is an old 
+[video](https://youtu.be/IzNTe-8Vw14?si=-qzY0dmMGLi5mBss&t=213) 
 for this lab that explains the recursion through the maze very well. 
 Some helpful timestamps:
     -For an explanation of how to read the input files: 1:21 - 2:02
