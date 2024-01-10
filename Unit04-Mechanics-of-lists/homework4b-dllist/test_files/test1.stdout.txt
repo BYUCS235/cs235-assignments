@@ -1,0 +1,17 @@
+--- Test 1 output ---
+
+list.push_front(5)
+list.push_front(9)
+list.push_back(9)
+list = 9 5 9
+
+list.push_back(16)
+list.push_back(15)
+list.push_front(7)
+list = 7 9 5 9 16 15
+
+list.push_front(6)
+list.push_front(3)
+list.push_front(10)
+list.push_back(3)
+list = 10 3 6 7 9 5 9 16 15 3

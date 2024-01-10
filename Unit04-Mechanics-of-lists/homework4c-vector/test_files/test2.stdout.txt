@@ -1,0 +1,17 @@
+--- Test 2 output ---
+
+vector.insert(5, 1) threw an out_of_range exception
+vector.insert(7, 0)
+vector.insert(6, 0)
+vector.insert(4, 2)
+vector = 6 7 4
+
+vector.insert(12, 1)
+vector.insert(1, 3)
+vector = 6 12 7 1 4
+
+vector.insert(7, 0)
+vector.insert(5, 0)
+vector.insert(19, 7)
+vector.insert(5, 9) threw an out_of_range exception
+vector = 5 7 6 12 7 1 4 19

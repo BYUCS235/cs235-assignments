@@ -1,0 +1,27 @@
+--- Test 3 output ---
+
+set.empty() = true
+
+set.insert(bottle) = true
+set.insert(flower) = true
+set.size() = 2
+
+set.insert(bottle) = false
+set.size() = 2
+
+set.insert(orange) = true
+set.size() = 3
+
+set.remove(bottle) = true
+set.remove(butter) = false
+set.size() = 2
+
+set.insert(bottle) = true
+set.size() = 3
+
+set.remove(flower) = true
+set.remove(orange) = true
+set.remove(bottle) = true
+set.size() = 0
+
+set.empty() = true

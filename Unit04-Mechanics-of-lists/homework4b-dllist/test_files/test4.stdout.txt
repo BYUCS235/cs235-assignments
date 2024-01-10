@@ -1,0 +1,20 @@
+--- Test 4 output ---
+
+list.at(0) threw an out_of_range exception
+list.push_front(apple)
+list.at(0) = apple
+list.push_back(xylophone)
+list.push_front(honey)
+list.at(2) = xylophone
+list.at(3) threw an out_of_range exception
+list = honey apple xylophone
+
+list.insert(gratitude, 1)
+list.at(1) = gratitude
+list.insert(nest, 4)
+list.at(4) = nest
+list = honey gratitude apple xylophone nest
+
+list.insert(utopia, 0)
+list.at(0) = utopia
+list = utopia honey gratitude apple xylophone nest

@@ -1,0 +1,14 @@
+--- Test 4 output ---
+
+set = {4, 6, 7, 15, 16, 19, 23, 29}
+set.size() = 8
+set.empty() = false
+
+set.clear()
+
+set.size() = 0
+set.empty() = true
+
+set.insert(4) = true
+set.size() = 1
+set.empty() = false

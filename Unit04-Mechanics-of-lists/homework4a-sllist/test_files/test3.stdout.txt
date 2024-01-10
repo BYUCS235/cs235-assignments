@@ -1,0 +1,14 @@
+--- Test 3 output ---
+
+list.push_back(kindness)
+list.push_back(peace)
+list.front() = kindness
+
+list.pop_back()
+list.pop_back()
+list.push_back(zebra)
+list.front() = zebra
+
+list.pop_back()
+list.push_back(joy)
+list.front() = joy

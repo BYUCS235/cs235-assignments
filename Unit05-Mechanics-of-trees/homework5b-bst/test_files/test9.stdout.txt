@@ -1,0 +1,18 @@
+--- Test 9 output ---
+
+       5
+
+   3       8
+
+ 2       6   9
+
+tree.contains(1) = false
+tree.contains(2) = true
+tree.contains(3) = true
+tree.contains(4) = false
+tree.contains(5) = true
+tree.contains(6) = true
+tree.contains(7) = false
+tree.contains(8) = true
+tree.contains(9) = true
+tree.contains(10) = false

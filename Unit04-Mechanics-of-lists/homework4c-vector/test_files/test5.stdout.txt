@@ -1,0 +1,23 @@
+--- Test 5 output ---
+
+vector.size() = 0
+vector.push_back(0)
+vector.size() = 1
+vector.insert(0, 0)
+vector.size() = 2
+vector.remove(0)
+vector.size() = 1
+
+vector.push_back(0)
+vector.push_back(0)
+vector.push_back(0)
+vector.push_back(0)
+vector.size() = 5
+
+vector.clear()
+vector.size() = 0
+
+vector.push_back(0)
+vector.push_back(0)
+vector.push_back(0)
+vector.size() = 3

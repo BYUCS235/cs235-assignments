@@ -1,0 +1,26 @@
+--- Test 7 output ---
+
+list = 15 14 11 15 20 19 11 5 14 3
+list.remove(3)
+
+list = 15 14 11 20 19 11 5 14 3
+list.remove(0)
+list.remove(0)
+list.remove(0)
+list.remove(5)
+list.remove(4)
+list.remove(3)
+
+list = 20 19 11
+list.remove(1)
+list = 20 11
+list.remove(1)
+list = 20
+list.remove(0)
+
+list =
+list.front() threw a length_error exception
+list.back() threw a length_error exception
+list.pop_front() threw a length_error exception
+list.pop_back() threw a length_error exception
+list.at(3) threw an out_of_range exception

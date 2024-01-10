@@ -1,0 +1,5 @@
+--- Test 5 output ---
+
+array = 1 7 8 9 11 11 15 16 18 20
+Sorting array...
+array = 1 7 8 9 11 11 15 16 18 20

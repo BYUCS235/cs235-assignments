@@ -1,0 +1,18 @@
+--- Test 1 output ---
+
+set.insert(10) = true
+set.insert(4) = true
+set.insert(5) = true
+set.insert(2) = true
+set.insert(10) = false
+
+set.contains(1) = false
+set.contains(2) = true
+set.contains(3) = false
+set.contains(4) = true
+set.contains(5) = true
+set.contains(6) = false
+set.contains(7) = false
+set.contains(8) = false
+set.contains(9) = false
+set.contains(10) = true

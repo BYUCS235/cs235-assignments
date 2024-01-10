@@ -1,0 +1,5 @@
+--- Test 7 output ---
+
+array = whisper coffee kaleidoscope coffee firefly marshmallow cascade bicycle aurora pillow
+Sorting array...
+array = aurora bicycle cascade coffee coffee firefly kaleidoscope marshmallow pillow whisper

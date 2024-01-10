@@ -1,0 +1,15 @@
+--- Test 2 output ---
+
+list.insert(monkey, 0)
+list.insert(hammer, 0)
+list.insert(opulent, 2)
+list = hammer monkey opulent
+
+list.insert(octopus, 6) threw an out_of_range exception
+list.insert(octopus, 2)
+list.insert(kindness, 1)
+list = hammer kindness monkey octopus opulent
+
+list.push_back(inspiration)
+list.push_front(ostrich)
+list = ostrich hammer kindness monkey octopus opulent inspiration

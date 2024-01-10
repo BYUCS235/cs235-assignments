@@ -1,0 +1,15 @@
+Smith, Alice: 37.5
+Johnson, Bob: 102
+Brown, Charlie: 55.8
+Lee, David: 85.8
+Williams, Elizabeth: 135
+Miller, Frank: 70
+Davis, Grace: 44
+Wilson, Henry: 161.5
+Martinez, Isabella: 104
+Taylor, James: 31.5
+Thompson, Katherine: 63.65
+Robinson, Liam: 123.2
+Garcia, Mia: 75.6
+Hernandez, Noah: 49.3
+Thomas, Olivia: 102.5

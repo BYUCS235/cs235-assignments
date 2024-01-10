@@ -1,0 +1,12 @@
+--- Test 4 output ---
+
+array = 6 14 19 5 7 1 18 16 8 16
+
+partition(array, 0, 4) = 2
+array = 6 5 7 14 19 1 18 16 8 16
+
+partition(array, 3, 9) = 7
+array = 6 5 7 16 8 1 14 16 19 18
+
+partition(array, 0, 9) = 4
+array = 6 5 7 1 8 16 14 16 19 18

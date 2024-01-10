@@ -1,0 +1,14 @@
+--- Test 2 output ---
+
+set = {candle, chair, circle, donkey, dragon, guitar, spring}
+
+set.remove(spring) = true
+set.remove(donkey) = true
+set.remove(chair) = true
+set.remove(coffee) = false
+set.remove(guitar) = true
+set.remove(chair) = false
+set.remove(candle) = true
+set.remove(circle) = true
+set.remove(dragon) = true
+set.remove(guitar) = false

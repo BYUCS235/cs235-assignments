@@ -1,0 +1,14 @@
+--- Test 6 output ---
+
+list = candle tranquility rainbow bliss quilt
+list.pop_front()
+list.pop_back()
+list = tranquility rainbow bliss
+
+list.pop_front()
+list.pop_front()
+list = bliss
+
+list.pop_back()
+list.pop_front() threw a length_error exception
+list.pop_front() threw a length_error exception

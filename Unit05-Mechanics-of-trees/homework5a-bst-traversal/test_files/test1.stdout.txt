@@ -1,0 +1,14 @@
+--- Test 1 output ---
+
+Empty tree
+
+find(root, 1) = false
+find(root, 2) = false
+find(root, 3) = false
+find(root, 4) = false
+find(root, 5) = false
+find(root, 6) = false
+find(root, 7) = false
+find(root, 8) = false
+find(root, 9) = false
+find(root, 10) = false

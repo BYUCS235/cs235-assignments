@@ -1,0 +1,12 @@
+--- Test 3 output ---
+
+array = velvet pillow pillow ocean mountain coffee cascade bubble blossom bicycle
+
+partition(array, 0, 4) = 3
+array = ocean pillow mountain pillow velvet coffee cascade bubble blossom bicycle
+
+partition(array, 3, 9) = 6
+array = ocean pillow mountain bicycle blossom bubble cascade coffee velvet pillow
+
+partition(array, 0, 9) = 6
+array = cascade coffee mountain bicycle blossom bubble ocean pillow velvet pillow

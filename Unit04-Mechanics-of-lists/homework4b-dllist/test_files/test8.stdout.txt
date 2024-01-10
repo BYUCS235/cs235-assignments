@@ -1,0 +1,34 @@
+--- Test 8 output ---
+
+list.size() = 0
+list.push_front(2)
+list.size() = 1
+list.push_back(5)
+list.size() = 2
+
+list.insert(3, 1)
+list.size() = 3
+list.insert(19, 4) threw an out_of_range exception
+list.size() = 3
+
+list.push_front(10)
+list.push_front(3)
+list.push_front(1)
+list.size() = 6
+
+list.remove(1)
+list.size() = 5
+list.pop_front()
+list.size() = 4
+list.pop_back()
+list.size() = 3
+list.remove(8) threw an out_of_range exception
+list.size() = 3
+
+list.clear()
+list.size() = 0
+
+list.pop_front() threw a length_error exception
+list.size() = 0
+list.pop_back() threw a length_error exception
+list.size() = 0

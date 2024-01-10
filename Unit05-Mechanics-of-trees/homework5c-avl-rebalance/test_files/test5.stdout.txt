@@ -1,0 +1,7 @@
+--- Test 5 output ---
+
+3|1
+
+rebalance(root)
+
+3|1

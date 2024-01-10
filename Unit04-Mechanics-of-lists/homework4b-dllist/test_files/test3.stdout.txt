@@ -1,0 +1,27 @@
+--- Test 3 output ---
+
+list.front() threw a length_error exception
+list.back() threw a length_error exception
+
+list.push_front(2)
+list.front() = 2
+list.back() = 2
+list = 2
+
+list.push_back(5)
+list.push_back(8)
+list.front() = 2
+list.back() = 8
+list = 2 5 8
+
+list.insert(12, 3)
+list.back() = 12
+list.insert(4, 3)
+list.back() = 12
+list = 2 5 8 4 12
+
+list.insert(0, 0)
+list.front() = 0
+list.insert(3, 1)
+list.front() = 0
+list = 0 3 2 5 8 4 12

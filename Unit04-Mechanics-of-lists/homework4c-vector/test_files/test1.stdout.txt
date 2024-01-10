@@ -1,0 +1,13 @@
+--- Test 1 output ---
+
+vector.push_back(wonder)
+vector.push_back(yak)
+vector = wonder yak
+
+vector.push_back(bookshelf)
+vector.push_back(euphoria)
+vector = wonder yak bookshelf euphoria
+
+vector.push_back(optimism)
+vector.push_back(cozy)
+vector = wonder yak bookshelf euphoria optimism cozy

@@ -1,0 +1,13 @@
+--- Test 5 output ---
+
+list = 7 10 2 8 9 5 8 4
+list.contains(1) = false
+list.contains(2) = true
+list.contains(3) = false
+list.contains(4) = true
+list.contains(5) = true
+list.contains(6) = false
+list.contains(7) = true
+list.contains(8) = true
+list.contains(9) = true
+list.contains(10) = true

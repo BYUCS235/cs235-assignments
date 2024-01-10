@@ -1,0 +1,22 @@
+--- Test 4 output ---
+
+vector.remove(0) threw an out_of_range exception
+vector.push_back(19)
+vector.push_back(1)
+vector.push_back(7)
+vector.push_back(12)
+vector.push_back(2)
+vector = 19 1 7 12 2
+
+vector.remove(0)
+vector = 1 7 12 2
+
+vector.remove(3)
+vector = 1 7 12
+
+vector.remove(1)
+vector = 1 12
+
+vector.remove(0)
+vector.remove(0)
+vector =
