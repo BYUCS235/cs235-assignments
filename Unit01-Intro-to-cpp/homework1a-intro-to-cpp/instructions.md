@@ -12,6 +12,13 @@ Write a calculator program in `calculator.cpp`.
 - The program should exit when given an empty operation
 - Follow the formatting demonstrated in the example
 
+There is no input file for the calculator assignment, so you should just type in values at the prompt.  Look in the test_files directory for examples
+operation: add
+left operand: 1
+right operand: 2
+3
+
+In this example, your code should prompt the user for an operation using the "input" function provided in the calculator.cpp file.  You should enter "add" in your terminal window.  Then your program should prompt the user for "left operand".  You should enter 1 in your terminal.  You should call the "input" function with the prompt "right operand" and the user should enter 2.  Your program should then output the answer "3"
 **Example**
 
 ```
