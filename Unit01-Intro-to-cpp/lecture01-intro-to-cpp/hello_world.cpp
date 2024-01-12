@@ -1,5 +1,9 @@
 #include <iostream>
 
+using std::cout;
+using std::endl;
+using std::cerr;
+
 int main() {
-    std::cout << "Hello world!" << std::endl;
+    cout << "Hello world!" << endl;
 }

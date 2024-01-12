@@ -6,7 +6,7 @@ using std::cout, std::endl;
  multiply them together and print the result
 */
 int main(int argc, char *argv[])
-{
+{ 
     // For demonstration purposes
     cout << "You gave me " << argc - 1 << " arguments" << endl;
     if (argc < 3) {
@@ -20,5 +20,4 @@ int main(int argc, char *argv[])
     int product = a * b;
 
     cout << a << " * " << b << " = " << product << endl;
-    
 }

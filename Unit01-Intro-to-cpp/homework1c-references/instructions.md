@@ -6,7 +6,7 @@ Write a program in `sort.cpp` that sorts three command-line arguments (strings) 
 
 - You should implement a function `void sort(std::string& a, std::string& b, std::string& c)`
   - Modify `a`, `b`, and `c` directly to sort the strings
-- Sort the strings shortest length to longest length. If two strings are the same length, sort them alphabetically.
+- Sort the strings alphabetically.
   <li>HINT: you can <a href="https://www.geeksforgeeks.org/comparing-string-objects-using-relational-operators-c/">compare</a> C++ strings using relational operators.</li>
   <li>HINT: sorting three items at a time is known as a "bubble sort".</li>
 - The program should output the sorted strings separated by a space and followed by a newline

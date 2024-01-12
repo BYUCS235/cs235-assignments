@@ -4,6 +4,8 @@ using std::cout, std::cerr, std::cin, std::endl;
 #include <string>
 using std::string;
 
+// #include "handy.h"
+
 int main()
 {
     cout << "add, replace, or quit: ";
@@ -34,6 +36,7 @@ int main()
             cout << "With string: ";
             cin >> with;
             cout << word.replace(pos, with.size(), with) << endl;
+            cout << word << endl;
         }
         else
         {
@@ -41,4 +44,5 @@ int main()
         }
         cout << "add, replace, or quit: ";
     }
+    cout << "all done!" << endl;
 }
