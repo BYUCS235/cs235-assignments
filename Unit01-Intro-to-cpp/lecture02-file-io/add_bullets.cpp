@@ -12,21 +12,21 @@ int main(int argc, char *argv[])
     // First arg is input file, second arg is output file, third arg is bullet
     if (argc < 4) {
         cerr << "This program needs an input file, output file, and bullet" << endl;
-        exit(1);
+        return 1;
     }
 
     ifstream infile(argv[1]);
     if (!infile.is_open())
     {
         cerr << "Unable to open file for reading: " << argv[1] << endl;
-        exit(2);
+        return 2;
     }
 
     ofstream outfile(argv[2]);
     if (!outfile.is_open())
     {
         cerr << "Unable to open file for writing: " << argv[2] << endl;
-        exit(3);
+        return 3;
     }
 
     string line;
