@@ -29,6 +29,8 @@ int main(int argc, char *argv[])
         return 3;
     }
 
+    // with open('foo.xt') as file:
+    //   for line in file:
     string line;
     while (getline(infile, line))
     {
