@@ -28,14 +28,14 @@ assignment's header. After that, you should be able to compile `main.cpp` with
 the following command:
 
 ```console
-> g++ -Wall -std=c++17 -o time main.cpp
+$ g++ -Wall -std=c++17 -o time main.cpp
 ```
 
 and run it with the command below. The output is a table showing the time it
 took to insert the specified number of elements into the set:
 
 ```console
-> ./time
+$ ./time
     N       Time to insert
 ---------- ----------------
      1000              0ms

@@ -7,14 +7,24 @@ using std::endl;
 
 #include "where.h"
 
-void swap(int &first, int &second)
+// void swap(int &first, int &second)
+void swap(int first, int second)
 {
     WHERE(first);
     WHERE(second);
+    cout << "first: " << first << endl;
+    cout << "second: " << second << endl;
+    
+    cout << "swap first and second" << endl;
+    cout << "i.e. swap data at " << &first << " and " << &second << endl;
+    // The & operator gets the location of the variable
 
     int tmp = first;
     first = second;
     second = tmp;
+    
+    cout << "first: " << first << endl;
+    cout << "second: " << second << endl;
 }
 
 int main(int argc, char **argv)

@@ -15,6 +15,7 @@ Write a calculator program in `calculator.cpp`.
 **Example**
 
 ```
+$ ./calculator
 operation: add
 left operand: 1
 right operand: 2

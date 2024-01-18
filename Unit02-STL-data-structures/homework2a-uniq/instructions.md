@@ -21,7 +21,7 @@ orange
 
 **Usage**
 ```
-$ uniq input.txt
+$ ./uniq input.txt
 orange
 apple
 banana

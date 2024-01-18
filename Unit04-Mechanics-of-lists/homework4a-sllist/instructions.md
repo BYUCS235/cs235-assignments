@@ -24,8 +24,8 @@ Create a singly linked list template class `SLList` in `SLList.h`.
 
 The following example will run the first automatic test:
 ```
-g++ tests.cpp -o tests
-./tests 1
+$ g++ tests.cpp -o tests
+$ ./tests 1
 ```
 **The possible tests for this assignment are 1, 2, 3, 4, or all.**
 

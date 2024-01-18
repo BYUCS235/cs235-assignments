@@ -40,6 +40,9 @@ Write a `head` program in `head.cpp`.
 - If more lines are requested than the input file has, the program should just print as many lines as the file has and no extras.
 - Follow the formatting demonstrated in the example
 
+### Important
+On Mac OS and Linux, `head` is a pre-existing system command whose functionality you are immitating.  If you run `head` rather than `./head`, you will run the system version rather than the one you wrote.
+
 ### Examples
 Click a hyperlink to navigate to a specific example:
 
@@ -61,7 +64,7 @@ line 7
 
 **Expected output**
 ```
-$ head -5 sample_input_file.txt
+$ ./head -5 sample_input_file.txt
 line 1
 line 2
 line 3
@@ -73,7 +76,7 @@ line 5
 `cin` input provided by autograder/user is italicized. Expected program output is unitalicized.
 **Expected output**
 ```
-$ head -3
+$ ./head -3
 *input line 1*
 input line 1
 *input line 2*
@@ -102,7 +105,7 @@ line 12
 
 **Expected output**
 ```
-$ head sample_input_file.txt
+$ ./head sample_input_file.txt
 line 1
 line 2
 line 3
@@ -126,7 +129,7 @@ line 5
 
 **Expected output**
 ```
-$ head -9 sample_input_file.txt
+$ ./head -9 sample_input_file.txt
 line 1
 line 2
 line 3
@@ -137,7 +140,7 @@ line 5
 #### <a id="filedne">File that does not exist example:</a>
 **Expected output**
 ```
-$ head -1000 file_that_does_not_exist.txt
+$ ./head -1000 file_that_does_not_exist.txt
 ERROR: can't open file_that_does_not_exist.txt
 ```
 

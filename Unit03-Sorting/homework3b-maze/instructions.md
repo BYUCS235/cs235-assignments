@@ -23,7 +23,7 @@ the maze file and the second argument is the solution output file:
 **Read to the bottom to understand Grid.h**
 
 ```shell
-./maze test_files/solvable1.maze.txt solvable1.solution.txt
+$ ./maze test_files/solvable1.maze.txt solvable1.solution.txt
 ```
 
 ### Maze format

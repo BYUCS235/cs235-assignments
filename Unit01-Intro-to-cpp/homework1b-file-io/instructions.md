@@ -25,7 +25,7 @@ Bob Johnson 5 2.0
 
 **Usage**
 ```
-./reformat input_file.txt output_file.txt
+$ ./reformat input_file.txt output_file.txt
 ```
 
 `output_file.txt`

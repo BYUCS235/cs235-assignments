@@ -25,8 +25,8 @@ In addition to the functionality described in [HW 4c Vector](../homework4c-vecto
 
 The following example will run the first automatic test:
 ```
-g++ tests.cpp -o tests
-./tests 1
+$ g++ tests.cpp -o tests
+$ ./tests 1
 ```
 **The possible tests for this assignment are 1, 2, or all.**
 
