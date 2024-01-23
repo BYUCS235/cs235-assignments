@@ -1,11 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+using std::stringstream;
+
 #include <string>
 using std::string;
 
 int count_words(string line) {
-    std::stringstream ss(line);
+    stringstream ss(line);
     int count = 0;
     string token;
     while (ss >> token) { count++; }

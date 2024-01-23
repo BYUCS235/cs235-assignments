@@ -46,5 +46,5 @@ int main(int argc, char **argv)
     {
         cerr << ex.what() << endl;
         return 1;
-    }
+    } 
 }

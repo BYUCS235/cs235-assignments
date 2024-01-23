@@ -29,15 +29,15 @@ int get_size(string text) {
     return text.size();
 }
 
-int get_size_ref(string& text) {
-    return text.size();
+int get_size_ref(string& some_text) {
+    return some_text.size();
 }
 
 int main(int argc, char** argv) {
     if (argc < 2) { cerr << "Needs file and how many" << endl; exit(1); }
 
     string filename(argv[1]);
-    int how_many(atoi(argv[2]));
+    int how_many(std::stoi(argv[2]));  // int how_many = atoi(argv[2]);
 
     string text = get_file_contents(filename);
     cout << "Length of text is: " << text.size() << endl;

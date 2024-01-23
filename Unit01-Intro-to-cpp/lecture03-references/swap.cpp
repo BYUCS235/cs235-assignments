@@ -7,8 +7,8 @@ using std::endl;
 
 #include "where.h"
 
-// void swap(int &first, int &second)
-void swap(int first, int second)
+void swap(int &first, int &second)
+// void swap(int first, int second)
 {
     WHERE(first);
     WHERE(second);
