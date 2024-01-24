@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
 
     if (argc == 2) {
         // Use file
+        cout << "using file stream" << endl;
         ifstream input(argv[1]);
         if (input.is_open()) {
             bullets(input);
@@ -39,6 +40,7 @@ int main(int argc, char** argv) {
 
     } else {
         // Use STDIN
+        cout << "using cin" << endl;
         bullets(cin);
     }
 

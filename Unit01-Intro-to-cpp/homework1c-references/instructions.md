@@ -41,7 +41,7 @@ Write a `head` program in `head.cpp`.
 - Follow the formatting demonstrated in the example
 
 ### Important
-On Mac OS and Linux, `head` is a pre-existing system command whose functionality you are immitating.  If you run `head` rather than `./head`, you will run the system version rather than the one you wrote.
+On Mac OS and Linux, `head` is a pre-existing system command whose functionality you are immitating.  If you run `head` rather than `./head`, you will run the system version instead of the one you wrote.
 
 ### Examples
 Click a hyperlink to navigate to a specific example:
@@ -72,19 +72,36 @@ line 4
 line 5
 ```
 
-#### <a id="1numlines">One argument-- number of lines example:</a>
-`cin` input provided by autograder/user is italicized. Expected program output is unitalicized.
-**Expected output**
+#### <a id="1numlines">One argument-- number of lines provided example:</a>
+This is an example of how you'll see stdin being provided to a program in real life:
+
+**`sample_input_stdin.txt`**
 ```
-$ ./head -3
-*input line 1*
 input line 1
-*input line 2*
 input line 2
-*input line 3*
 input line 3
 ```
-#### <a id="1inputfile">One argument-- filename example:</a>
+**Expected output**
+```
+$ cat sample_input_stdin.txt | ./head -3
+input line 1
+input line 2
+input line 3
+```
+
+Below is a visual of what the above example is doing. `cin` input provided by autograder/user is commented out. Expected program output is not.
+
+**Expected output**
+```
+$ ./head -3 
+// input line 1
+input line 1
+// input line 2
+input line 2
+// input line 3
+input line 3
+```
+#### <a id="1inputfile">One argument-- filename provided example:</a>
 **Expected output**
 
 **`sample_input_file.txt`**

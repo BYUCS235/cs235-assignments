@@ -8,10 +8,12 @@ using std::cout, std::cerr, std::endl;
 using std::atoi;
 
 
-void reckless_with_your_data(int& number, string& phrase) {
+void reckless_with_your_data(int const& number, const string& phrase) {
     for (int i = 0; i < number; i++) {
         cout << phrase << endl;
     }
+    // number = 7;
+    // phrase = "I prefer anchovies";
 }
 
 int main(int argc, char** argv) {

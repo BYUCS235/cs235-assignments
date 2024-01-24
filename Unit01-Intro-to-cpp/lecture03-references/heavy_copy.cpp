@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
     cout << "Length of text X " << how_many << " is: " << total_size << endl;
     cout << "Version with string took " << duration.count() << " nanoseconds" << endl;
 
-    /* Version with string copy */    
+    /* Version with string reference */    
     cout << endl;
     cout << "Exercise with string& beginning..." << endl;
 
