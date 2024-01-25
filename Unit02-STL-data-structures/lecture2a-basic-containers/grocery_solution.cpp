@@ -1,26 +1,30 @@
-#include <vector>
-#include <iostream>
-#include <string>
-using std::string;
+// :)
 
-bool input(string const &prompt, string &response)
-{
-    std::cout << prompt;
-    std::getline(std::cin, response);
-    return response == "";
+#include <iostream>
+using std::cout, std::endl, std::cin;
+
+#include <string>
+using std::string, std::getline;
+
+#include <vector>
+using std::vector;
+
+
+bool input(string const& prompt, string& line) {
+    cout << prompt;
+    return getline(cin, line) && !line.empty();
 }
 
-int main()
-{
-    std::vector<string> items;
+int main() {
+    vector<string> groceries;
+
     string item;
-    while (input("Item: ", item))
-    {
-        items.push_back(item);
+    while (input("Item: ", item)) {
+        groceries.push_back(item);
     }
     
-    for (auto item : items)
-    {
-        std::cout << "- " << item << std::endl;
+    for (auto const& item : groceries) {
+        cout << "- " << item << endl;
     }
+
 }

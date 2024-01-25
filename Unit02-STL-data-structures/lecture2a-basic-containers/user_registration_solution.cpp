@@ -1,45 +1,40 @@
-#include <iostream>
-using std::cout, std::endl, std::cin;
+// :)
 
-#include <string>
-using std::string;
-
-#include <vector>
-using std::vector;
 
 #include <unordered_set>
 using std::unordered_set;
 
+#include <string>
+using std::string, std::getline;
 
-string input(string prompt) {
+#include <iostream>
+using std::cout, std::endl, std::cin;
+
+#include <vector>
+using std::vector;
+
+bool input(string const& prompt, string& line) {
     cout << prompt;
-    string response;
-    getline(cin, response);
-    return response;
+    return getline(cin, line) && !line.empty();
 }
 
 
 int main() {
     vector<string> users;
-    unordered_set<string> user_ids;
+    unordered_set<string> ids;
 
-    while (true) {
-        string uid = input("User ID: ");
-        if (uid == "") { break; }
+    string id;
+    while (input("ID: ", id)) {
+        auto ret = ids.insert(id);
+        if (!ret.second) { cout << "That ID is already taken" << endl; continue; }
 
-        if (user_ids.find(uid) != user_ids.end()) {
-            cout << "That ID is already taken. Please pick another." << endl;
-            continue;
-        } else {
-            user_ids.insert(uid);
-        }
-
-        string user = input("User first and last name: ");
-        users.push_back(user + " (" + uid + ")");
+        string name;
+        cout << "Name: ";
+        getline(cin, name);
+        users.push_back(name + " (" + id + ")");
     }
 
-    cout << endl << "Registered Users" << endl;
-    for (auto user : users) {
-        cout << user << endl;
+    for (auto const& name : users) {
+        cout << name << endl;
     }
 }
