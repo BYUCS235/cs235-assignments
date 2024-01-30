@@ -13,7 +13,8 @@ private:
     string word;
 
 public:
-    Stuff(int number, double decimal_number, string text) : integer(number), decimal(decimal_number), word(text) { }
+    Stuff(int number, double decimal_number, string text) 
+    : integer(number), decimal(decimal_number), word(text) { }
 
     int get_integer() const { return integer; }
     double get_decimal() const { return decimal; }

@@ -1,17 +1,18 @@
 #include <vector>
 #include <string>
-using std::string, std::getline;
+using std::string, std::getline, std::stoul;
 #include <iostream>
 using std::cout, std::cin, std::endl;
 
 class Counters
 {
+    // class fields default to private if they aren't in a public section.
     std::vector<int> _counters;
 
 public:
     Counters(size_t size) : _counters(size)  // initialize a pre-allocated vector of size `size`
     {
-        for (int i = 0; i < size; i++)
+        for (size_t i = 0; i < size; i++)
         {
             _counters[i] = 0;
         }
@@ -32,8 +33,7 @@ public:
 
 bool input(string const& prompt, string &response) {
     cout << prompt;
-    getline(cin, response);
-    return (response != "");
+    return getline(cin, response) && (response != "");
 }
 
 
@@ -41,7 +41,7 @@ int main() {
     Counters counters(31);
     string response;
     while (input("Day of month: ", response)) {
-       int day = std::stoi(response);
+       size_t day = stoul(response);
        counters.increment(day); 
     }
 
