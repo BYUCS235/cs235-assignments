@@ -37,5 +37,9 @@ class NoisyVector {
     T& operator[](size_t position) {
         announce("[]", ++index_count);
         return items[position];
+        // This lets us do something like:
+        // NoisyVector<int> nv;
+        // nv.push_back(1);
+        // nv[0] = 7;
     }
 };

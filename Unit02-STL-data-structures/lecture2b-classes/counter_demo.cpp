@@ -23,11 +23,11 @@ public:
     }
 
     int increment(size_t which) {
-        return ++_counters.at(which);
+        return ++_counters.at(which-1);
     }
 
     int get(size_t which) const {
-        return _counters.at(which);
+        return _counters.at(which-1);
     }
 };
 
@@ -36,6 +36,12 @@ bool input(string const& prompt, string &response) {
     return getline(cin, response) && (response != "");
 }
 
+std::ostream & operator<<(std::ostream &out, Counters const& counters) {
+    for (size_t i = 0; i < counters.size(); i++) {
+        out << i+1 << ": " << counters.get(i+1) << endl;
+    } 
+    return out;
+}
 
 int main() {
     Counters counters(31);
@@ -45,7 +51,5 @@ int main() {
        counters.increment(day); 
     }
 
-    for (size_t i = 0; i < counters.size(); i++) {
-        cout << i << ": " << counters.get(i) << endl;
-    } 
+    cout << counters << endl;
 }

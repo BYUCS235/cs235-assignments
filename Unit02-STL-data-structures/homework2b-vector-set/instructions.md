@@ -41,6 +41,22 @@ s1.clear();
 s1.size() // Returns 0
 ```
 
+## Tips
+
+To remove an item from a vector, you can use something like:
+
+```c++
+for (auto iter = _vec.begin(); iter != _vec.end(); iter++) {
+    if (*iter == item) {
+        _vec.erase(iter);
+    }
+}
+```
+
+This example uses an *iterator* to traverse the vector (named `_vec`) and find the item of interest and erase it. 
+
+We'll cover iterators more later in the course.
+
 ## Grading
 
 `VectorSet.h` is worth 100 points.

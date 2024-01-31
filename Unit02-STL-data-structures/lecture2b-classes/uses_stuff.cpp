@@ -8,6 +8,8 @@ int main()
     Stuff my_stuff(8, 3.14, "woot");
     Stuff const more_stuff(-23456, 4546.2344e23, "epic");
     
+    int result = my_stuff + more_stuff;
+    
     cout << "I have stuff: " << endl;
     cout << my_stuff << endl;
     cout << "...and more stuff: " << endl;
