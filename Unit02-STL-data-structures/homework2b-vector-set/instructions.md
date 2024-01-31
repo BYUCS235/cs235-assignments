@@ -60,3 +60,10 @@ We'll cover iterators more later in the course.
 ## Grading
 
 `VectorSet.h` is worth 100 points.
+
+| Methods  | Points  |
+|---|---|
+| Insert / Contains | 25 |
+| Remove | 25 |
+| Empty / Size | 25 |
+| Clear | 25 |

@@ -20,7 +20,7 @@ wish to determine a path through the storage facility.
 Write a 3D maze solver program in `maze.cpp`. The first command-line argument is
 the maze file and the second argument is the solution output file:
 
-**Read to the <a href="#grid">bottom</a> to understand Grid.h**
+**For an explanation of how to use Grid.h, see <a href="#grid">here</a>**
 
 ```shell
 $ ./maze test_files/solvable1.maze.txt solvable1.solution.txt
@@ -54,13 +54,13 @@ Some helpful timestamps:
     not have to import the maze yourself, you do not have to generate a random maze, and you should use the provided Grid
     class instead of using a 3D array as the video suggests.
 
-## Some tips for setting up your code:
+### Some tips for setting up your code
 - Use the Grid class to make your maze (see <a href="#grid">Managing the 3D Maze Structure</a>).
 - Create a recursive helper function such as `bool find_maze_path(Grid& grid, int row, int col, int level, vector<string>& solution) {}` to perform the recursion. This function should be called from `main()`.
 - Store the path you find through the maze in some type of data structure (we recommend a vector or stack). Print the vector to the output file in your `main()` function.
 - Your path structure can hold any data type you want in it. We recommend `std::string`, `vector<int>`, `vector<vector<int>>` (vector of vectors), or `tuple<int, int, int>` (make sure you `#include <tuple>` at the top of your code if you use this one)
 
-## Some pseudocode for recursing through the maze:
+### Some pseudocode for recursing through the maze
 ```bool find_maze_path(Grid& grid, int row, int col, int level, vector<string>& solution) {
 
     // check base cases (conditions under which your recursion should stop/return false)
