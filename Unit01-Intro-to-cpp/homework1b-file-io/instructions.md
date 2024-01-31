@@ -36,7 +36,7 @@ Johnson, Bob: 10
 
 ## Longest Line
 
-Write a program in `longest_line.cpp` that reads an input file, and outputs the line containing the largest number of words to the console (i.e. to `cout`, **not** to an output file).
+Write a program in `longest_line.cpp` that reads an input file, and outputs the line containing the largest number of **words** to the console, not chars (i.e. to `cout`, **not** to an output file).
 
 - You will receive a file name as a command line argument
   - `argc` will always be 2
