@@ -68,3 +68,13 @@ cdef qwerty 123 qwe
 ## Grading
 
 `reformat.cpp` and `longest_line.cpp` are both worth 50 points.
+
+| Methods          | Points |
+|------------------|--------|
+| test 1           | 25     |
+| test 2           | 25     |
+| **Longest line** | **50** |
+| test 1           | 25     |
+| test 2           | 25     |
+| **Reformat**     | **50** |
+| **Total**        | **50** |

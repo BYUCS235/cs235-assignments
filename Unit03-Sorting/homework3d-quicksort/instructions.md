@@ -121,3 +121,14 @@ $ ./tests 1
 `QS.h` is worth 100 points.
 
 You will be graded on the correct implementation of `medianOfThree`, `partition`, and `sort`.
+
+| Methods                  | Points   |
+|--------------------------|----------|
+| median of three          | 10       |
+| partition already sorted | 15       |
+| partition reversed       | 15       |
+| partition shuffled       | 15       |
+| sort already sorted      | 15       |
+| sort reversed            | 15       |
+| sort shuffled            | 15       |
+| **Total**                | **100**  |

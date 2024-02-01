@@ -165,3 +165,18 @@ ERROR: can't open file_that_does_not_exist.txt
 ## Grading
 
 `sort.cpp` and `head.cpp` are both worth 50 points.
+
+| Methods          | Points   |
+|------------------|----------|
+| no arguments     | 10       |
+| only lines       | 10       |
+| only input file  | 10       |
+| both arguments   | 10       |
+| not enough lines | 10       |
+| **Head**         | **50**   |
+| test1            | 12.5     |
+| test2            | 12.5     |
+| test3            | 12.5     |
+| test4            | 12.5     |
+| **Sort**         | **50**   |
+| **Total**        | **100**  |

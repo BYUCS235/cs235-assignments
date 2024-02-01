@@ -46,3 +46,13 @@ $ ./tests 1
 ## Grading
 
 `Vector.h` is worth 100 points.
+
+| Methods           | Points   |
+|-------------------|----------|
+| push back         | 15       |
+| insert            | 17       |
+| operator brackets | 15       |
+| remove            | 15       |
+| size & clear      | 18       |
+| growing           | 20       |
+| **Total**         | **100**  |

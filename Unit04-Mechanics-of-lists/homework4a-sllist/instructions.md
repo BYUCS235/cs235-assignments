@@ -39,3 +39,11 @@ $ ./tests 1
 ## Grading
 
 `SLList.h` is worth 100 points.
+
+| Methods      | Points   |
+|--------------|----------|
+| push back    | 30       |
+| pop back     | 30       |
+| front        | 20       |
+| size & clear | 20       |
+| **Total**    | **100**  |

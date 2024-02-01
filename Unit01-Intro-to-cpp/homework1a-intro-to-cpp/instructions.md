@@ -80,3 +80,19 @@ $ ./numbers_divisible_by 10 1 3
 
 `calculator.cpp` and `numbers_divisible_by.cpp` are each worth 50 points.
 
+| Methods           | Points  |
+|-------------------|---------|
+| add               | 8.33    |
+| subtract          | 8.33    |
+| multiply          | 8.33    |
+| divide            | 8.33    |
+| mod               | 8.33    |
+| invalid           | 8.33    |
+| **Calculator**    | **50**  |
+| going up          | 10      |
+| going down        | 10      |
+| up with bounds    | 10      |
+| down with bounds  | 10      |
+| negative and zero | 10      |
+| **Num Div By**    | **50**  |
+| **Total**         | **100** |

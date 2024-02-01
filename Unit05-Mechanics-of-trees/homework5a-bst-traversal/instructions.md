@@ -13,3 +13,11 @@ Write a function to perform a search in a binary search tree in `find.h`.
 ## Grading
 
 `find.h` is worth 100 points.
+
+| Methods          | Points   |
+|------------------|----------|
+| empty tree       | 25       |
+| line going right | 25       |
+| line going left  | 25       |
+| balanced tree    | 25       |
+| **Total**        | **100**  |

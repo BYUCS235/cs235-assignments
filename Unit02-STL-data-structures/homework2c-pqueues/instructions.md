@@ -46,3 +46,9 @@ What do you want to do?
 ## Grading
 
 `pqueues.cpp` is worth 100 points.
+
+| Methods            | Points   |
+|--------------------|----------|
+| simple             | 50       |
+| complex            | 50       |
+| **Priority Queue** | **100**  |

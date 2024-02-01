@@ -38,3 +38,9 @@ $ ./tests 1
 **Grading**
 
 `Vector.h` is worth 100 points.
+
+| Methods    | Points   |
+|------------|----------|
+| add        | 50       |
+| upper      | 50       |
+| **Total**  | **100**  |

@@ -45,3 +45,11 @@ grape
 ## Grading
 
 `sort.cpp` is worth 100 points.
+
+| Methods        | Points   |
+|----------------|----------|
+| already sorted | 25       |
+| reversed       | 25       |
+| shuffled       | 25       |
+| stdin          | 25       |
+| **Total**      | **100**  |

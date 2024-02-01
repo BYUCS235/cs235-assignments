@@ -51,3 +51,15 @@ $ ./tests 1
 ## Grading
 
 `DLList.h` is worth 100 points.
+
+| Methods           | Points   |
+|-------------------|----------|
+| push front & back | 12.5     |
+| insert            | 12.5     |
+| front & back      | 12.5     |
+| at                | 12.5     |
+| contains          | 12.5     |
+| pop front & back  | 12.5     |
+| remove            | 12.5     |
+| size & clear      | 12.5     |
+| **Total**         | **100**  |

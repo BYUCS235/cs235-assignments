@@ -134,8 +134,17 @@ std::cout << maze.at(row, column, level); // access the value at a specific loca
 maze.at(row, column, level) = 2; // set the value at a specific location. This is a great way to mark a location as visited.
 ```
 
+Good job for reading all of the instructions!
 ## Grading
 
 `maze.cpp` is worth 100 points.
-Good job for reading all of the instructions!
 
+| Methods      | Points  |
+|--------------|---------|
+| solvable 1   | 15      |
+| solvable 2   | 15      |
+| solvable 3   | 20      |
+| unsolvable 1 | 15      |
+| unsolvable 2 | 15      |
+| unsolvable 3 | 20      |
+| **Total**    | **100** |

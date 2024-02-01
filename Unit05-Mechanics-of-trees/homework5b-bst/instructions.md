@@ -18,3 +18,17 @@ Implement a binary search tree in `BST.h`. The class should be templated to acce
 ## Grading
 
 `BST.h` is worth 100 points.
+
+| Methods                            | Points  |
+|------------------------------------|---------|
+| insert into empty tree             | 10      |
+| build complex tree                 | 10      |
+| remove leaf node                   | 10      |
+| remove node with left child        | 10      |
+| remove node with right child       | 10      |
+| remove node with two leaf children | 10      |
+| remove node with two subtrees      | 10      |
+| repeatedly remove root             | 10      |
+| contains                           | 10      |
+| size & clear                       | 10      |
+| **Total**                          | **100** |

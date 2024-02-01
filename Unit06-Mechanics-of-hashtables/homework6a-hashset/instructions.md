@@ -13,3 +13,12 @@ Implement a simple `HashSet` class in `HashSet.h`.
 ## Grading
 
 `HashSet.h` is worth 100 points.
+
+| Methods                | Points   |
+|------------------------|----------|
+| insert                 | 20       |
+| contains               | 20       |
+| remove                 | 20       |
+| size & clear           | 10       |
+| re-hashing stress test | 30       |
+| **Total**              | **100**  |
