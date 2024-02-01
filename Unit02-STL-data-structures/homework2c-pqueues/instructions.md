@@ -6,7 +6,7 @@ Write a priority queue program in `pqueues.cpp`.
 
 - You can assume the user always provides valid inputs
   - e.g. the test will not enter non-numeric input when the program expects a number
-  - you should use the provided input.h function for your inputs
+  - you should use the provided `input.h` function for your inputs
 - Support `add` and `take` operations:
   - `add` requires a `Name` and `Priority` input
   - `take` will display the next person in line according to their priority
