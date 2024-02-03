@@ -135,6 +135,12 @@ maze.at(row, column, level) = 2; // set the value at a specific location. This i
 ```
 
 Good job for reading all of the instructions!
+## Debugging
+Your assignments are getting complex enough now that you will need to adopt a different strategy for debugging.  Here are a few ideas that should be helpful:
+1. You may have used "cout" to print out the values of variables in the past, but now the problems will be complex enough that you will probably be confused by a large number of debugging statements.  You ought to become familiar with the [Clion debugger](https://youtu.be/wUZyoAnPdCY?si=Su_ghWrnlPF0ZsW3).  It will allow you to set breakpoints at certain lines of your code and will let you display the values of all of your variables.
+2. If you have been relying on the passoff autograder before, you ought to get used to creating your own test cases.  Although the "test_files directory has the cases that will be used by the autograder, you should create your own test cases with results that you know to allow you to debug your code more easily.  For example, you may want to create a 3 dimensional grid that is 2x2x2 so you can make sure that your basic functions are working.  Thoroughly test your code with your own test cases before trying to pass your code off with the autograder.
+3. You will also want to test boundary conditions.  For example, create a test case that will cause your code to explore the left side, right side, top or bottom of the grid to make sure that your code can deal with these circumstances.
+
 ## Grading
 
 `maze.cpp` is worth 100 points.
