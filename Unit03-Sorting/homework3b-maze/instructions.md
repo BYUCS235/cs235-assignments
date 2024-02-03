@@ -122,7 +122,17 @@ SOLUTION
 ```
 Work through the example by hand so you know how to code your implementation.
 1. The first line of the SOLUTION is "0 0 0" indicating that we start in the 0 row, the 0 column and the 0 level. "**1** 1 0 0"
-2. The next line specifies "0 1 0" indicating that the solution moves 
+2. The next line specifies "0 1 0" indicating that the solution moves in the only direction where there is a "1" value to the next column. "1 **1** 0 0"
+3. Now the only direction possible is to move to the next row "1 1 0" which contains "0 **1** 0 0"
+4. The only possible move at this point is to move to the bottom row of the 0 level "2 1 0" with "0 **1** 1 0"
+5. Now the solution moves to the right staying on the 0 level for "2 2 0" with "0 1 **1** 0"
+6. At this point, the only move is to the next level with a "1" in the third character of the solution "2 2 1" with "0 0 **1** 0".
+7. Now the solution moves to the bottom level with a "2" in the third character of the solution "2 2 2" with "0 0 **1** 1".
+8. And the last step is to move right on the bottom level to the solution "2 3 2" with "0 0 1 **1**".
+
+Work through some of your own test cases and then make sure your code follows the exact same steps.  Catch bugs early or you will have a hard time completing the assignment.
+
+
 ## <a id="grid">Managing the 3D maze structure</a>
 
 Use the provided `Grid` class to manage the 3D maze in memory. You can read [Grid.h](https://github.com/BYUCS235/cs235-assignments/blob/main/Unit03-Sorting/homework3b-maze/Grid.h "Grid.h") for more details on how to use it, but its basic usage looks like this:
