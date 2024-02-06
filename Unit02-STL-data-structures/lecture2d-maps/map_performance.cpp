@@ -17,7 +17,7 @@ long long gauntlet(size_t bound = 1000000, size_t rounds = 5)
     for (size_t round = 0; round < rounds; round++)
     {
         M numbers;
-        for (size_t i = 0; i < bound; i++)
+        for (size_t i = 0; numbers.size() < bound; i = (i + 23) % bound)
         {
             numbers[i] = i + 1;
         }
@@ -28,7 +28,7 @@ long long gauntlet(size_t bound = 1000000, size_t rounds = 5)
 
 int main()
 {
-    for (size_t bound : {1000, 10000, 100000, 1000000, 10000000})
+    for (size_t bound : {100000, 1000000, 10000000, 100000000}) // This will use about 4.5GB RAM!
     {
         cout << "N = " << bound << endl;
         
