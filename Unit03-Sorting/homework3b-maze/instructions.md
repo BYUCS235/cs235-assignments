@@ -120,18 +120,6 @@ SOLUTION
 2 2 2
 2 3 2
 ```
-Work through the example by hand so you know how to code your implementation.
-1. The first line of the SOLUTION is "0 0 0" indicating that we start in the 0 row, the 0 column and the 0 level. "**1** 1 0 0"
-2. The next line specifies "0 1 0" indicating that the solution moves in the only direction where there is a "1" value to the next column. "1 **1** 0 0"
-3. Now the only direction possible is to move to the next row "1 1 0" which contains "0 **1** 0 0"
-4. The only possible move at this point is to move to the bottom row of the 0 level "2 1 0" with "0 **1** 1 0"
-5. Now the solution moves to the right staying on the 0 level for "2 2 0" with "0 1 **1** 0"
-6. At this point, the only move is to the next level with a "1" in the third character of the solution "2 2 1" with "0 0 **1** 0".
-7. Now the solution moves to the bottom level with a "2" in the third character of the solution "2 2 2" with "0 0 **1** 1".
-8. And the last step is to move right on the bottom level to the solution "2 3 2" with "0 0 1 **1**".
-
-Work through some of your own test cases and then make sure your code follows the exact same steps.  Catch bugs early or you will have a hard time completing the assignment.
-
 
 ## <a id="grid">Managing the 3D maze structure</a>
 
@@ -147,12 +135,6 @@ maze.at(row, column, level) = 2; // set the value at a specific location. This i
 ```
 
 Good job for reading all of the instructions!
-## Debugging
-Your assignments are getting complex enough now that you will need to adopt a different strategy for debugging.  Here are a few ideas that should be helpful:
-1. You may have used "cout" to print out the values of variables in the past, but now the problems will be complex enough that you will probably be confused by a large number of debugging statements.  You ought to become familiar with the [Clion debugger](https://youtu.be/wUZyoAnPdCY?si=Su_ghWrnlPF0ZsW3).  It will allow you to set breakpoints at certain lines of your code and will let you display the values of all of your variables.
-2. If you have been relying on the passoff autograder before, you ought to get used to creating your own test cases.  Although the "test_files directory has the cases that will be used by the autograder, you should create your own test cases with results that you know to allow you to debug your code more easily.  For example, you may want to create a 3 dimensional grid that is 2x2x2 so you can make sure that your basic functions are working.  Thoroughly test your code with your own test cases before trying to pass your code off with the autograder.
-3. You will also want to test boundary conditions.  For example, create a test case that will cause your code to explore the left side, right side, top or bottom of the grid to make sure that your code can deal with these circumstances.
-
 ## Grading
 
 `maze.cpp` is worth 100 points.
