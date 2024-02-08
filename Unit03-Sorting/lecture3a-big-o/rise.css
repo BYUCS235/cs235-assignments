@@ -1,0 +1,15 @@
+.big {
+    font-size: 200px
+}
+
+div.centered {
+    text-align: center
+}
+
+.rendered_html pre code.language-terminal {
+    background-color: rgb(211, 221, 235);
+}
+
+.rendered_html pre code.language-in-docker {
+    background-color: rgb(217, 236, 230);
+}
