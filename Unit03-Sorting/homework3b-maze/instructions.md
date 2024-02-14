@@ -135,7 +135,18 @@ maze.at(row, column, level) = 2; // set the value at a specific location. This i
 ```
 
 Good job for reading all of the instructions!
+
 ## Grading
+
+**IMPORTANT**: Some of the mazes may have multiple solutions. 
+Just because your solution does not perfectly match the provided solution does not mean your solution is wrong. 
+
+Your solution is correct if:
+- it starts at `0 0 0`
+- it ends at the opposite corner of the maze
+- every step along the path is a `1` in the maze
+- each step is adjacent to the previous step
+  - diagonal steps are not allowed
 
 `maze.cpp` is worth 100 points.
 

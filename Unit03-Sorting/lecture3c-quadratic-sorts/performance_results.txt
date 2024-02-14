@@ -1,0 +1,47 @@
+(base) gbean Unit07-Sorting % make perf   
+g++ -o sort -std=c++14 sort.cpp
+echo "No Sort"
+No Sort
+bash -c "time cat many-words.txt | ./sort nothing > /dev/null"
+
+real	0m0.223s
+user	0m0.107s
+sys	0m0.005s
+echo
+
+echo "Selection"
+Selection
+bash -c "time cat many-words.txt | ./sort selection > /dev/null"
+
+real	3m56.578s
+user	3m55.811s
+sys	0m0.486s
+echo
+
+echo "Insertion"
+Insertion
+bash -c "time cat many-words.txt | ./sort insertion > /dev/null"
+
+real	2m1.832s
+user	2m1.102s
+sys	0m0.340s
+echo
+
+echo "Merge"
+Merge
+bash -c "time cat many-words.txt | ./sort merge > /dev/null"
+
+real	0m0.445s
+user	0m0.432s
+sys	0m0.006s
+echo
+
+echo "Quick"
+Quick
+bash -c "time cat many-words.txt | ./sort quick > /dev/null"
+
+real	0m0.179s
+user	0m0.172s
+sys	0m0.004s
+echo
+
