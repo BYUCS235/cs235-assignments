@@ -37,7 +37,7 @@ void sort(vector<T> &items)
 #endif
 
 #ifndef N
-#define N 20000 
+#define N 40000 
 #endif
 
 template <class T>

@@ -3,8 +3,9 @@
 #include <vector>
 using std::vector;
 
-#include <algorithm>
-using std::swap;
+#include "handy.h" 
+using handy::swap;
+// PRINT macro
 
 template <class T>
 void sort(vector<T> &stuff)

@@ -1,15 +1,5 @@
 #pragma once
 
-#include <string>
-using std::string;
-
-#include <vector>
-using std::vector;
-
-#include <iostream>
-using std::cout, std::endl;
-
-#include <chrono>
 
 #ifdef ANSI
 #define SWAP cout << "\033[32m";
@@ -21,11 +11,38 @@ using std::cout, std::endl;
 #define POS
 #endif
 
+
 #ifdef VERBOSE
 #define PRINT(x, k, i, j) handy::print(x, k, i, j);
 #else
 #define PRINT(x, k, i, j)
 #endif
+
+
+#ifdef DEBUG
+
+#define TRACE std::cerr << "TRACE line: " << __LINE__ << std::endl;
+#define TRACK(x) std::cerr << "TRACK line: " << __LINE__ << "; " << #x << " is " << x << std::endl;
+
+#else
+
+#define TRACE 
+#define TRACK(x)
+
+#endif
+
+
+#include <string>
+using std::string;
+
+#include <vector>
+using std::vector;
+
+#include <iostream>
+using std::cout, std::endl;
+
+#include <chrono>
+
 
 namespace handy
 {
@@ -35,7 +52,7 @@ namespace handy
         a = b;
         b = tmp;
     }
-    
+
     /*
         Print out everything in the vector on a single line
     */
