@@ -3,8 +3,8 @@
 #include <vector>
 using std::vector;
 
-#include <algorithm>
-using std::swap;
+#include "handy.h"  // PRINT macro
+using handy::swap;
 
 template <class T>
 void sort(vector<T> &stuff)
@@ -16,12 +16,16 @@ void sort(vector<T> &stuff)
         int min = i;
         for (int j = i; j < stuff.size(); j++)
         { 
+            PRINT(stuff, j, -1, -1)
+
             if (stuff[j] < stuff[min])
             {
                 min = j;
             }
         }
+
         // Swap i and min
         swap(stuff[i], stuff[min]);
+        PRINT(stuff, -1, i, min)
     }
 }

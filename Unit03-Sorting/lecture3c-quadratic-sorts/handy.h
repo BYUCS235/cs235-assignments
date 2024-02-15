@@ -11,17 +11,58 @@ using std::cout, std::endl;
 
 #include <chrono>
 
+#ifdef ANSI
+#define SWAP cout << "\033[32m";
+#define POS cout << "\033[48;5;7m";
+#define CLOSE cout << "\033[0m";
+#else
+#define SWAP
+#define CLOSE
+#define POS
+#endif
+
+#ifdef VERBOSE
+#define PRINT(x, k, i, j) handy::print(x, k, i, j);
+#else
+#define PRINT(x, k, i, j)
+#endif
+
 namespace handy
 {
+    template <class T>
+    void swap(T &a, T&b) {
+        T tmp = a;
+        a = b;
+        b = tmp;
+    }
+    
     /*
-        Print out everything in the container on a single line
+        Print out everything in the vector on a single line
     */
-    template <class C>
-    void print(C const &stuff)
+    template <class T>
+    void print(vector<T> const &stuff, int key_pos = -1, int swap_i = -1, int swap_j = -1)
     {
-        for (auto const &thing : stuff)
+        for (int pos = 0; pos < stuff.size(); pos++)
         {
-            cout << thing << " ";
+            // ANSI codes
+            if (pos == key_pos)
+            {
+                POS;
+            }
+            if (pos == swap_i || pos == swap_j)
+            {
+                SWAP;
+            }
+
+            // Print item
+            cout << stuff[pos];
+
+            // Reset ANSI codes            
+            if (pos == key_pos || pos == swap_i || pos == swap_j)
+            {
+                CLOSE;
+            }
+            cout << " ";
         }
         cout << endl;
     }

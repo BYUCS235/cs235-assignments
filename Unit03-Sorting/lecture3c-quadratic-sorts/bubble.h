@@ -3,8 +3,8 @@
 #include <vector>
 using std::vector;
 
-#include <algorithm>
-using std::swap;
+#include "handy.h" // PRINT macro
+using handy::swap;
 
 template <class T>
 void sort(vector<T> &items)
@@ -15,10 +15,13 @@ void sort(vector<T> &items)
         modified = false;
         for (size_t i = 0; i < items.size() - 1; i++)
         {
+            PRINT(items, i, -1, -1)
+
             if (items[i] > items[i + 1])
             {
                 modified = true;
                 swap(items[i], items[i + 1]);
+                PRINT(items, i, i, i + 1)
             }
         }
     }
