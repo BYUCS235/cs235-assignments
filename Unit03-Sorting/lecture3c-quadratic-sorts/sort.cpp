@@ -25,6 +25,15 @@ using handy::print;
 #elif SORT == 5 // quick
 #include "quick.h"
 
+#elif SORT == 6 // bean
+#include "bean.h"
+
+#elif SORT == 7 // std::sort
+#include <algorithm>
+template<class T>
+void sort(vector<T> &items) {
+    std::sort(items.begin(), items.end());
+}
 #else
 template <class T>
 void sort(vector<T> &items)
