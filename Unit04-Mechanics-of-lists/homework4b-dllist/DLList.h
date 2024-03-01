@@ -6,6 +6,13 @@
 template<class T>
 class DLList {
 public:
+    // **Important**
+    // Normally you would make the Node struct PRIVATE
+    // but for this assignment it is important to keep it 
+    // PUBLIC
+    // Also, the declaration of Node needs to come 
+    // before everything else in the class, so leave it here
+    // at the beginning.
     struct Node {
         Node* prev;
         Node* next;
@@ -14,6 +21,10 @@ public:
         Node(T v) : prev(nullptr), next(nullptr), value(v) {}
     };
 
+private:
+    // Put your private fields/methods here
+
+public:
     DLList() {}
 
     ~DLList() {}
