@@ -1,7 +1,0 @@
-digraph {
-  nZ [label="Z" pos="1.4,2.0!" label=<Z <br/><font point-size="10">(h:3, b:<font color="red">-2</font>)</font>>]
-  nY [label="Y" pos="0.0,1.0!" label=<Y <br/><font point-size="10">(h:2, b:-1)</font>>]
-  nX [label="X" pos="-0.7,0.0!" label=<X <br/><font point-size="10">(h:1, b:0)</font>>]
-  nZ -> nY 
-  nY -> nX 
-}
