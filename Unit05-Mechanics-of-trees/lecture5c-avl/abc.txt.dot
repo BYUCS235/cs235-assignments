@@ -1,0 +1,7 @@
+digraph {
+  nA [label="A" pos="0.8,2.0!" ]
+  nB [label="B" pos="1.6,1.0!" ]
+  nC [label="C" pos="2.0,0.0!" ]
+  nA -> nB 
+  nB -> nC 
+}

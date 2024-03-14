@@ -1,0 +1,9 @@
+digraph {
+    A->B
+    A->C
+    A->D
+    B->E
+    C->F
+    C->G
+    C->H
+}

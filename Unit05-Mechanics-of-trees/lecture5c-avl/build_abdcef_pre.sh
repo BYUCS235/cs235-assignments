@@ -1,0 +1,19 @@
+cat << EOF > abdcef_pre.txt
+B > A
+B < D
+B [label=<B <br/><font point-size="10">(h:<font color="darkgreen">4</font>, b:<font color="red">2</font>)</font>>]
+A [label=<A <br/><font point-size="10">(h:1, b:0)</font>>]
+D [color="blue" label=<D <br/><font point-size="10">(h:<font color="darkgreen">3</font>, b:<font color="darkgreen">1</font>)</font>>]
+
+D > C
+D < E
+C [label=<C <br/><font point-size="10">(h:1, b:0)</font>>]
+E [label=<E <br/><font point-size="10">(h:<font color="darkgreen">2</font>, b:<font color="darkgreen">1</font>)</font>>]
+
+E < F
+F [label=<F <br/><font point-size="10">(h:1, b:0)</font>>]
+
+B -> C [color="blue" style="dotted"]
+D -> B [color="blue" style="dotted"]
+EOF
+python3 ~/projects/btrees/btrees.py --w-scale 0.7 abdcef_pre.txt

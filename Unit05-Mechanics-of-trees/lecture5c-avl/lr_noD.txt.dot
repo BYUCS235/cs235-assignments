@@ -1,0 +1,9 @@
+digraph {
+  nB [label="B" pos="2.0,2.0!" label=<B <br/><font point-size="10">(h:3, b:1)</font>>]
+  nC [label="C" pos="4.0,1.0!" label=<C <br/><font point-size="10">(h:2, b:1)</font>>]
+  nE [label="E" pos="5.0,0.0!" label=<E <br/><font point-size="10">(h:1, b:0)</font>>]
+  nA [label="A" pos="0.0,1.0!" label=<A <br/><font point-size="10">(h:1, b:0)</font>>]
+  nB -> nC 
+  nC -> nE 
+  nB -> nA 
+}

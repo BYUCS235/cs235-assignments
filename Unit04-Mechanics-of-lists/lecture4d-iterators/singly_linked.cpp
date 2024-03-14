@@ -66,20 +66,22 @@ public:
     }
 
     class iterator {
+        friend class SLList;
+        
         // Track whatever state is necessary to keep track of your place in the container
         Node* current;
         
-        public:
         // The constructor starts with this information
         iterator(Node*const& node) : current(node) {}
 
-        // Define == and != so you know when you've reached end()
+        public:
+                // Define == and != so you know when you've reached end()
         bool operator==(iterator const& other) {
             return current == other.current;
         }
 
         bool operator!=(iterator const& other) {
-            return !(*this == other);
+            return current != other.current; 
         }
 
         // Define ++ to move from the current position to the next one
@@ -89,7 +91,7 @@ public:
         }
 
         // Define * to retrieve the value at the current position
-        T operator*() {
+        T& operator*() {
             return current->value;
         }
     };  // Don't forget the semicolon at the end of the class!

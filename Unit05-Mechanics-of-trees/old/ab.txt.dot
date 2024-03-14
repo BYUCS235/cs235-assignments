@@ -1,0 +1,5 @@
+digraph {
+  nA [label="A" pos="0.5,1.0!" xlabel="h:1, b:1"]
+  nB [label="B" pos="1.0,0.0!" xlabel="h:0, b:0"]
+  nA -> nB 
+}

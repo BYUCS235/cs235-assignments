@@ -1,0 +1,1422 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "01db02d6",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[NbConvertApp] Converting notebook Interval Trees.ipynb to html_embed\n",
+      "Traceback (most recent call last):\n",
+      "  File \"/opt/conda/bin/jupyter-nbconvert\", line 11, in <module>\n",
+      "    sys.exit(main())\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/jupyter_core/application.py\", line 264, in launch_instance\n",
+      "    return super(JupyterApp, cls).launch_instance(argv=argv, **kwargs)\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/traitlets/config/application.py\", line 846, in launch_instance\n",
+      "    app.start()\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/nbconvert/nbconvertapp.py\", line 361, in start\n",
+      "    self.convert_notebooks()\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/nbconvert/nbconvertapp.py\", line 533, in convert_notebooks\n",
+      "    self.convert_single_notebook(notebook_filename)\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/nbconvert/nbconvertapp.py\", line 498, in convert_single_notebook\n",
+      "    output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/nbconvert/nbconvertapp.py\", line 427, in export_single_notebook\n",
+      "    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/nbconvert/exporters/exporter.py\", line 186, in from_filename\n",
+      "    return self.from_file(f, resources=resources, **kw)\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/nbconvert/exporters/exporter.py\", line 204, in from_file\n",
+      "    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/jupyter_contrib_nbextensions/nbconvert_support/embedhtml.py\", line 92, in from_notebook_node\n",
+      "    self.replfunc(n)\n",
+      "  File \"/opt/conda/lib/python3.9/site-packages/jupyter_contrib_nbextensions/nbconvert_support/embedhtml.py\", line 54, in replfunc\n",
+      "    with open(filename, 'rb') as f:\n",
+      "FileNotFoundError: [Errno 2] No such file or directory: 'interval-tree.png?5'\n"
+     ]
+    }
+   ],
+   "source": [
+    "! jupyter nbconvert \"Interval Trees.ipynb\" --Exporter.preprocessors jupybeans.RemoveSkip --to html_embed "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "28c6af24",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Interval Trees\n",
+    "\n",
+    "https://en.wikipedia.org/wiki/Interval_tree"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d740e648",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Intervals\n",
+    "\n",
+    "An interval is a range along a series of sorted values, defined by a starting and ending value. \n",
+    "\n",
+    "The bounds, i.e. the start or end of an interval, can be either **inclusive** or **exclusive**\n",
+    "\n",
+    "An **inclusive** bound is included in the interval. Inclusive bounds are identified with square brackes: **\\[** **\\]**.\n",
+    "\n",
+    "An **exclusive** bound is excluded from the interval. Exclusive bounds are identified with parentheses: **(**  **)**.\n",
+    "\n",
+    "In interval may be defined with one bound being inclusive and the other exclusive.\n",
+    "\n",
+    "In fact, it is very common to define an interval with an inclusive start and an exclusive end. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3816751b",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "Work with a partner:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f450c146",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "source": [
+    "What integers are included in the interval `[0, 5]`?\n",
+    "\n",
+    "What integers are included in the interval `(4, 7)`?\n",
+    "\n",
+    "What integers are included in the interval `(8, 12]`?\n",
+    "\n",
+    "What integers are included in the interval `[3, 6)`?\n",
+    "\n",
+    "What integers are included in the interval `[2, 2)`?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7f02b5d3",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "What integers are included in the interval `[0, 5]`? **0, 1, 2, 3, 4 ,5**\n",
+    "\n",
+    "What integers are included in the interval `(4, 7)`? **4, 5, 6**\n",
+    "\n",
+    "What integers are included in the interval `(8, 12]`? **9, 10, 11, 12**\n",
+    "\n",
+    "What integers are included in the interval `[3, 6)`? **3, 4, 5**\n",
+    "\n",
+    "What integers are included in the interval `[2, 2)`? **Empty!**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5bca64e7",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Intervals in Real Life"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "853e1a03",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- Periods of time\n",
+    "  - My class is from 8:00 to 9:30am\n",
+    "  - Are these bounds inclusive or exclusive?\n",
+    "- Sequence of landmarks on a defined route\n",
+    "  - The left lane is closed between milemarker 85 and 97 on I-15\n",
+    "  - Are these bounds inclusive or exclusive?\n",
+    "- Regions of a genome\n",
+    "  - The gene *TP53* is found on chromosome 17 from position 7,661,779 to 7,687,538\n",
+    "  - Are these bounds inclusive or exclusive?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1bef8ed1",
+   "metadata": {},
+   "source": [
+    "Sometime the inclusive/exclusive nature is obvious or intuitive. Other times it is not.\n",
+    "\n",
+    "When writing software that deals with intervals and bounds, we need to have a clear understanding of how the bounds are defined in our problem!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2eaca372",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Interval Queries"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dab05fa8",
+   "metadata": {},
+   "source": [
+    "Let's say we have a large list of intervals. \n",
+    "\n",
+    "I want to know which intervals overlap a given point.\n",
+    "\n",
+    "#### Example\n",
+    "\n",
+    "Given the intervals\n",
+    "\n",
+    "```\n",
+    "[4, 9)\n",
+    "[0, 3)\n",
+    "[2, 7)\n",
+    "[5, 6)\n",
+    "[6, 8)\n",
+    "```\n",
+    "\n",
+    "which intervals overlap 6?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7336e06e",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "```\n",
+    "[4, 9)\n",
+    "[2, 7)\n",
+    "[6, 8)\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "44d4ae4b",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "What C++ expression would you use to check whether the interval overlaps the point?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d4c16d86",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "```c++\n",
+    "bool overlaps(int start, int end, int point) {\n",
+    "    return point >= start && point < end;\n",
+    "}\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "74b620ce",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "What kind of algorithms could we use to implement an interval query?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "17b91489",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "### Interval Query Algorithm #1\n",
+    "\n",
+    "- Iterate through the list of intervals\n",
+    "- If the interval overlaps the point, keep it."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3e3231ff",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "What is the big-O complexity of this algorithm?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "be91fd3a",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "$O(n)$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "60c7abb4",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "### Interval Query Algorithm #2\n",
+    "\n",
+    "- Sort the intervals...somehow?\n",
+    "- Use binary search to find...something?\n",
+    "\n",
+    "<div class='big centered'> 🤔 </div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ffd54473",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "How could you sort intervals?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9bd82bf5",
+   "metadata": {},
+   "source": [
+    "```\n",
+    "0 1 2 3 4 5 6 7 8 9\n",
+    "        ----------\n",
+    "------\n",
+    "    ----------\n",
+    "          --\n",
+    "            ----\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "83de3630",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "We could sort them by starting position"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d8533507",
+   "metadata": {},
+   "source": [
+    "```\n",
+    "0 1 2 3 4 5 6 7 8 9\n",
+    "------\n",
+    "    ----------\n",
+    "        ----------\n",
+    "          --\n",
+    "            ----\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "358802e4",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "We could sort them by ending position"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b415a8d3",
+   "metadata": {},
+   "source": [
+    "```\n",
+    "0 1 2 3 4 5 6 7 8 9\n",
+    "------\n",
+    "          --\n",
+    "    ----------\n",
+    "            ----\n",
+    "        ----------\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "eb7874b0",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "Let's say we sort them by starting position:\n",
+    "\n",
+    "```\n",
+    "[0, 3)\n",
+    "[2, 7)\n",
+    "[4, 9)\n",
+    "[5, 6)\n",
+    "[6, 8)\n",
+    "```\n",
+    "\n",
+    "What would a binary search give us?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "09cec888",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- Compare 6 to `[4, 9)`\n",
+    "  - Is 6 greater than, less than, or equal to `[4, 9)`?\n",
+    "- If I only compare to the starting bound, I'll move down the list and eventually find `[6, 8)`, but will miss `[2, 7)` and `[4, 9)`!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "11ab2521",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "### Interval Query Algorithm #3\n",
+    "\n",
+    "Use an Interval Tree!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7e99894e",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Interval Trees\n",
+    "\n",
+    "- In interval tree is an extension of the binary search tree.\n",
+    "- It holds intervals instead of discrete points\n",
+    "- There are many ways to implement them, but we'll focus on the **augmented interval tree** design.\n",
+    "- You can query an interval tree with a point and find all intervals that overlap that point faster than $O(n)$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f4cf8fbb",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "### Augmented Interval Tree"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "e67cd70c",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting interval-tree.txt\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file interval-tree.txt\n",
+    "i49 > i27\n",
+    "i27 > i03\n",
+    "i49 < i56\n",
+    "i56 < i68\n",
+    "\n",
+    "i03 [label=<[0, 3)<br/><font point-size=\"10\" color=\"blue\">[0,3)</font>>]\n",
+    "i27 [label=<[2, 7)<br/><font point-size=\"10\" color=\"blue\">[0,7)</font>>]\n",
+    "i49 [label=<[4, 9)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i56 [label=<[5, 6)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "i68 [label=<[6, 8)<br/><font point-size=\"10\" color=\"blue\">[6,8)</font>>]\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "84cded2a",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "!python /data/projects/btrees/btrees.py --w-scale 1 interval-tree.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2fe8cfff",
+   "metadata": {},
+   "source": [
+    "<img src=\"interval-tree.png?5\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "31ae3344",
+   "metadata": {},
+   "source": [
+    "- Each node stores the interval it represents\n",
+    "  - AND it stores the maximum range of the sub-tree it represents\n",
+    "- The nodes are sorted by starting position, then ending position\n",
+    "  ```\n",
+    "  interval_1 < interval_2 = \n",
+    "      interval_1.start < interval_2.start || \n",
+    "      (interval_1.start == interval_2.start && interval_1.end < interval_2.end)\n",
+    "  ```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ffe0610b",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "source": [
+    "```\n",
+    "0 1 2 3 4 5 6 7 8 9\n",
+    "----\n",
+    "------\n",
+    "  ----\n",
+    "    ----------\n",
+    "      --\n",
+    "      ----\n",
+    "        ------\n",
+    "        ----------\n",
+    "          --\n",
+    "          ----\n",
+    "            ----\n",
+    "              --\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "a1a5c0a1",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting bigger.txt\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file bigger.txt\n",
+    "i49 > i27\n",
+    "i27 > i03\n",
+    "i27 < i35\n",
+    "i35 > i34\n",
+    "i35 < i47\n",
+    "i03 < i13\n",
+    "i03 > i02\n",
+    "i49 < i56\n",
+    "i56 < i68\n",
+    "i68 > i57\n",
+    "i68 < i78\n",
+    "\n",
+    "i02 [label=<[0, 2)<br/><font point-size=\"10\" color=\"blue\">[0,2)</font>>]\n",
+    "i13 [label=<[1, 3)<br/><font point-size=\"10\" color=\"blue\">[1,3)</font>>]\n",
+    "i03 [label=<[0, 3)<br/><font point-size=\"10\" color=\"blue\">[0,3)</font>>]\n",
+    "i34 [label=<[3, 4)<br/><font point-size=\"10\" color=\"blue\">[3,4)</font>>]\n",
+    "i47 [label=<[4, 7)<br/><font point-size=\"10\" color=\"blue\">[4,7)</font>>]\n",
+    "i35 [label=<[3, 5)<br/><font point-size=\"10\" color=\"blue\">[3,7)</font>>]\n",
+    "i27 [label=<[2, 7)<br/><font point-size=\"10\" color=\"blue\">[0,7)</font>>]\n",
+    "i49 [label=<[4, 9)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i57 [label=<[5, 7)<br/><font point-size=\"10\" color=\"blue\">[5,7)</font>>]\n",
+    "i78 [label=<[7, 8)<br/><font point-size=\"10\" color=\"blue\">[7,8)</font>>]\n",
+    "i68 [label=<[6, 8)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "i56 [label=<[5, 6)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 62,
+   "id": "e001d8ba",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "!python /data/projects/btrees/btrees.py --w-scale 1 bigger.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "0af30f5a",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "! cat bigger.txt | sed 's/blue/white/' > bigger-no-aug.txt && python /data/projects/btrees/btrees.py --w-scale 1 bigger-no-aug.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "012f450f",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "Work with a partner:\n",
+    "\n",
+    "Annotate each node with the maximum bounds of the respective subtree."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ff1577ef",
+   "metadata": {},
+   "source": [
+    "<img src=\"bigger-no-aug.png?2\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "463da4c2",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "<img src=\"bigger.png?7\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1f6c4880",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Querying an Interval Tree\n",
+    "\n",
+    "- Compare to the left maximum bounds\n",
+    "  - If they overlap the point, go left\n",
+    "- Compare to the current node\n",
+    "  - If the current interval overlaps the point, include it\n",
+    "- Compare to the right maximum bounds\n",
+    "  - If they overlap the point, go right"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "30d25f09",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- What is the base case?\n",
+    "- Do we progress towards the base case?\n",
+    "- Is the induction correct?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "62b60294",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "<img src=\"bigger.png?7\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1f464ead",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "source": [
+    "What is the set of intervals that overlap 3?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "014b2ac5",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- Does 3 overlap `[0, 7)`? Yes. Go left.\n",
+    "  - Does 3 overlap `[0, 3)`? No.\n",
+    "  - Does 3 overlap `[2, 7)`? Yes. Include **`[2, 7)`**.\n",
+    "  - Does 3 overlap `[3, 7)`? Yes. Go right.\n",
+    "    - Does 3 overlap `[3, 4)`? Yes. Go left.\n",
+    "      - Does 3 overlap `[3, 4)`? Yes. Include **`[3, 4)`**.\n",
+    "    - Does 3 overlap `[3, 5)`? Yes. Include **`[3, 5)`**.\n",
+    "    - Does 3 overlap `[4, 7)`? No.\n",
+    "- Does 3 overlap `[4, 9)`? No.\n",
+    "- Does 3 overlap `[5, 8)`? No.\n",
+    "\n",
+    "**`[2, 7), [3, 4), [3, 5)`**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5b85e8f4",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "<img src=\"bigger.png?7\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ee92984c",
+   "metadata": {},
+   "source": [
+    "Work with a partner:\n",
+    "\n",
+    "What is the set of intervals that overlap 5?\n",
+    "\n",
+    "```c++\n",
+    "void _query(int point, Node* node, vector<Interval>& results) {\n",
+    "    if (node->left is not null && node->min_max.contains(point)) { go left; }\n",
+    "    if (node->interval.contains(point) { results.push_back(node->interval); }\n",
+    "    // check right\n",
+    "}\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "72634a4a",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- Does 5 overlap `[0, 7)`? Yes. Go left.\n",
+    "  - Does 5 overlap `[0, 3)`? No.\n",
+    "  - Does 5 overlap `[2, 7)`? Yes. Include **`[2, 7)`**.\n",
+    "  - Does 5 overlap `[3, 7)`? Yes. Go right.\n",
+    "    - Does 5 overlap `[3, 4)`? No.\n",
+    "    - Does 5 overlap `[3, 5)`? No.\n",
+    "    - Does 5 overlap `[4, 7)`? Yes. Go right.\n",
+    "      - Does 5 overlap `[4, 7)`? Yes. Include **`[4, 7)`**.\n",
+    "- Does 5 overlap `[4, 9)`? Yes. Include **`[4, 9)`**.\n",
+    "- Does 5 overlap `[5, 8)`? Yes. Go right.\n",
+    "  - Does 5 overlap `[5, 6)`? Yes. Include **`[5, 6)`**.\n",
+    "  - Does 5 overlap `[5, 8)`? Yes. Go right.\n",
+    "    - Does 5 overlap `[5, 7)`? Yes. Go left.\n",
+    "      - Does 5 overlap `[5, 7)`? Yes. Include **`[5, 7)`**.\n",
+    "    - Does 5 overlap `[6, 8)`? No.\n",
+    "    - Does 5 overlap `[7, 8)`? No.\n",
+    "    \n",
+    "**`[2, 7), [4, 7), [4, 9), [5, 6), [5, 7)`**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a6c7d855",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "### Big-O Complexity of Query\n",
+    "\n",
+    "What is the big-O complexity of the interval tree query?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "15d11747",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- How much work do we do at each node?\n",
+    "  - Compare to interval and each child max interval: $O(1)$\n",
+    "- How many nodes do we visit?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "73e067e9",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- When none of the intervals overlap each other, how many nodes would we visit?\n",
+    "- When all of the intervals overlap the point, how many nodes should we visit?\n",
+    "- When many intervals overlap each other, what happens to the performance of the query?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4f602c3b",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "- When none of the intervals overlap each other, how many nodes would we visit?\n",
+    "  - $O(\\log n)$\n",
+    "  \n",
+    "- When all of the intervals overlap the point, how many nodes should we visit?\n",
+    "  - $O(n)$\n",
+    "  - Is this poor performance?\n",
+    "    - Not necessarily: if all the intervals overlap, then they should all be returned, which means visiting all of them.\n",
+    "  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "48620e79",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "What kinds of trees have poor query performance?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bbb1309c",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- Imbalanced trees\n",
+    "- Leaves with broad ranges\n",
+    "  - You have to search through many small, non-overlapping nodes in order to reach the broad, overlapping nodes."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 75,
+   "id": "5b4e73b8",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting pathological-it.txt\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file pathological-it.txt\n",
+    "i34 > i12\n",
+    "i12 > i09\n",
+    "i12 < i29\n",
+    "i34 < i35\n",
+    "i35 > i39\n",
+    "i35 < i49\n",
+    "\n",
+    "i34 [label=<[3, 4)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i12 [label=<[1, 2)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i09 [label=<[0, 9)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i29 [label=<[2, 9)<br/><font point-size=\"10\" color=\"blue\">[2,9)</font>>]\n",
+    "i34 [label=<[3, 4)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i35 [label=<[3, 5)<br/><font point-size=\"10\" color=\"blue\">[3,9)</font>>]\n",
+    "i39 [label=<[3, 9)<br/><font point-size=\"10\" color=\"blue\">[3,9)</font>>]\n",
+    "i49 [label=<[4, 9)<br/><font point-size=\"10\" color=\"blue\">[4,9)</font>>]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "id": "cbf9fb5d",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "!python /data/projects/btrees/btrees.py --w-scale 1 pathological-it.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "02ea9c79",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "<img src=\"pathological-it.png?5\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "71afc1e7",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "source": [
+    "What intervals overlap 5?\n",
+    "\n",
+    "**`[0, 9), [2, 9), [3, 9), [4, 9)`**\n",
+    "\n",
+    "How many nodes got visited?\n",
+    "\n",
+    "**All of them** $O(n)$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "15a03658",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Adding to an Interval Tree"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a7072410",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "Do a BST insert!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c13ae85b",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "<div class='big centered'> 💪🏻 </div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5c5fd331",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "Ok, maybe it's a *little* more nuanced than that. 🙂"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5299b273",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "### Interval Tree Insert\n",
+    "\n",
+    "- Using the BST insert algorithm, find where the new interval will go and insert it\n",
+    "  - Use the interval comparison operator defined earlier\n",
+    "- As you recurse out, if a node was added, update the max intervals.\n",
+    "  - Compare the node max intervals to the child max intervals"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 81,
+   "id": "b1740426",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting bigger-no47.txt\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file bigger-no47.txt\n",
+    "i49 > i27\n",
+    "i27 > i03\n",
+    "i27 < i35\n",
+    "i35 > i34\n",
+    "i03 < i13\n",
+    "i03 > i02\n",
+    "i49 < i56\n",
+    "i56 < i68\n",
+    "i68 > i57\n",
+    "i68 < i78\n",
+    "\n",
+    "i02 [label=<[0, 2)<br/><font point-size=\"10\" color=\"blue\">[0,2)</font>>]\n",
+    "i13 [label=<[1, 3)<br/><font point-size=\"10\" color=\"blue\">[1,3)</font>>]\n",
+    "i03 [label=<[0, 3)<br/><font point-size=\"10\" color=\"blue\">[0,3)</font>>]\n",
+    "i34 [label=<[3, 4)<br/><font point-size=\"10\" color=\"blue\">[3,4)</font>>]\n",
+    "i35 [label=<[3, 5)<br/><font point-size=\"10\" color=\"blue\">[3,5)</font>>]\n",
+    "i27 [label=<[2, 7)<br/><font point-size=\"10\" color=\"blue\">[0,7)</font>>]\n",
+    "i49 [label=<[4, 9)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i57 [label=<[5, 7)<br/><font point-size=\"10\" color=\"blue\">[5,7)</font>>]\n",
+    "i78 [label=<[7, 8)<br/><font point-size=\"10\" color=\"blue\">[7,8)</font>>]\n",
+    "i68 [label=<[6, 8)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "i56 [label=<[5, 6)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 82,
+   "id": "769c3046",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "!python /data/projects/btrees/btrees.py --w-scale 1 bigger-no47.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b5423c65",
+   "metadata": {},
+   "source": [
+    "<img src=\"bigger-no47.png?2\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fc71a8e6",
+   "metadata": {},
+   "source": [
+    "What happens when I add `[4, 7)`?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f70d5401",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- `[4, 7) < [4, 9)` - go left\n",
+    "  - `[4, 7) > [2, 7)` - go right\n",
+    "    - `[4, 7) > [3, 5)` - go right\n",
+    "      - Add `[4, 7)` to the tree\n",
+    "    - Update max interval of `[3, 5)` to `[3, 7)`\n",
+    "  - Compare max interval of `[2, 7)` - no change needed.\n",
+    "- Compare max interval of `[4, 9)` - no change needed."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4fa9074d",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "source": [
+    "<img src=\"bigger.png?7\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bca2bb98",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Removing from an Interval Tree"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "19f92148",
+   "metadata": {},
+   "source": [
+    "- Using the BST remove algorithm, remove the interval (if present)\n",
+    "- As you recurse out, if a node was removed, update the max intervals"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 81,
+   "id": "3d091a02",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting bigger-no47.txt\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file bigger-no47.txt\n",
+    "i49 > i27\n",
+    "i27 > i03\n",
+    "i27 < i35\n",
+    "i35 > i34\n",
+    "i03 < i13\n",
+    "i03 > i02\n",
+    "i49 < i56\n",
+    "i56 < i68\n",
+    "i68 > i57\n",
+    "i68 < i78\n",
+    "\n",
+    "i02 [label=<[0, 2)<br/><font point-size=\"10\" color=\"blue\">[0,2)</font>>]\n",
+    "i13 [label=<[1, 3)<br/><font point-size=\"10\" color=\"blue\">[1,3)</font>>]\n",
+    "i03 [label=<[0, 3)<br/><font point-size=\"10\" color=\"blue\">[0,3)</font>>]\n",
+    "i34 [label=<[3, 4)<br/><font point-size=\"10\" color=\"blue\">[3,4)</font>>]\n",
+    "i35 [label=<[3, 5)<br/><font point-size=\"10\" color=\"blue\">[3,5)</font>>]\n",
+    "i27 [label=<[2, 7)<br/><font point-size=\"10\" color=\"blue\">[0,7)</font>>]\n",
+    "i49 [label=<[4, 9)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i57 [label=<[5, 7)<br/><font point-size=\"10\" color=\"blue\">[5,7)</font>>]\n",
+    "i78 [label=<[7, 8)<br/><font point-size=\"10\" color=\"blue\">[7,8)</font>>]\n",
+    "i68 [label=<[6, 8)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "i56 [label=<[5, 6)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 82,
+   "id": "40282773",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "!python /data/projects/btrees/btrees.py --w-scale 1 bigger-no47.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5fdf6b2b",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "<img src=\"bigger.png?7\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cd350b35",
+   "metadata": {},
+   "source": [
+    "What happens when I remove `[2, 7)`?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0ba435e8",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "fragment"
+    }
+   },
+   "source": [
+    "- `[2,7) < [4,9)` - go left\n",
+    "  - `[2,7) == [2, 7)`, remove this node\n",
+    "    - Find the IOP => `[1, 3)`\n",
+    "    - Replace the value with IOP value\n",
+    "    - Remove IOP\n",
+    "      - `[1, 3) > [0, 3)` - go right\n",
+    "        - `[1, 3) == [1, 3)` - remove it\n",
+    "      - Update max interval\n",
+    "    - Update max interval\n",
+    "  - Update max interval\n",
+    "- Update max interval"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "id": "7f6c2d01",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting bigger-no27.txt\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file bigger-no27.txt\n",
+    "i49 > i13\n",
+    "i13 > i03\n",
+    "i13 < i35\n",
+    "i35 > i34\n",
+    "i35 < i47\n",
+    "i03 > i02\n",
+    "i49 < i56\n",
+    "i56 < i68\n",
+    "i68 > i57\n",
+    "i68 < i78\n",
+    "\n",
+    "i02 [label=<[0, 2)<br/><font point-size=\"10\" color=\"blue\">[0,2)</font>>]\n",
+    "i13 [label=<[1, 3)<br/><font point-size=\"10\" color=\"blue\">[0,7)</font>>]\n",
+    "i03 [label=<[0, 3)<br/><font point-size=\"10\" color=\"blue\">[0,3)</font>>]\n",
+    "i34 [label=<[3, 4)<br/><font point-size=\"10\" color=\"blue\">[3,4)</font>>]\n",
+    "i47 [label=<[4, 7)<br/><font point-size=\"10\" color=\"blue\">[4,7)</font>>]\n",
+    "i35 [label=<[3, 5)<br/><font point-size=\"10\" color=\"blue\">[3,7)</font>>]\n",
+    "i49 [label=<[4, 9)<br/><font point-size=\"10\" color=\"blue\">[0,9)</font>>]\n",
+    "i57 [label=<[5, 7)<br/><font point-size=\"10\" color=\"blue\">[5,7)</font>>]\n",
+    "i78 [label=<[7, 8)<br/><font point-size=\"10\" color=\"blue\">[7,8)</font>>]\n",
+    "i68 [label=<[6, 8)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "i56 [label=<[5, 6)<br/><font point-size=\"10\" color=\"blue\">[5,8)</font>>]\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "id": "d2a7ead7",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "skip"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "!python /data/projects/btrees/btrees.py --w-scale 1 bigger-no27.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a838e7b2",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "source": [
+    "<img src=\"bigger-no27.png?1\" />"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9d3a6026",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Interval Trees: Key Ideas\n",
+    "\n",
+    "- Interval trees allow you to quickly query for intervals that overlap a point\n",
+    "  - When the intervals are discrete, the performance is $O(\\log n)$\n",
+    "  - When the intervals have lots of overlaps, the performance can approach $O(n)$\n",
+    "  - When all the intervals overlap the point, then you get $O(n)$ performance\n",
+    "    - But in this case this is as good as you could expect to do\n",
+    "- Augmented Interval Trees are modified BSTs that keep track of the minimum and maximum bounds of each subtree"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6201a57d",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "## Review Lab Instructions\n",
+    "\n",
+    "- `Interval` class\n",
+    "- `Node` class\n",
+    "- `Interval Tree` class\n",
+    "- Testing requirement\n",
+    "- Operator overloads\n",
+    "- How to set up the lab\n",
+    "\n",
+    "https://github.com/BYUCS235/Interval-Tree-Lab\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "celltoolbar": "Slideshow",
+  "kernelspec": {
+   "display_name": "C++11",
+   "language": "C++11",
+   "name": "xcpp11"
+  },
+  "language_info": {
+   "codemirror_mode": "text/x-c++src",
+   "file_extension": ".cpp",
+   "mimetype": "text/x-c++src",
+   "name": "c++",
+   "version": "11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

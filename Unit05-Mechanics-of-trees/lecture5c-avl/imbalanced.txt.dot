@@ -1,0 +1,33 @@
+digraph {
+  nH [label="H" pos="8.0,5.0!" ]
+  nT [label="T" pos="16.0,4.0!" ]
+  nW [label="W" pos="20.0,3.0!" ]
+  nX [label="X" pos="22.0,2.0!" ]
+  nY [label="Y" pos="23.0,0.9999999999999998!" ]
+  nZ [label="Z" pos="23.5,0.0!" ]
+  nM [label="M" pos="18.0,2.0!" ]
+  nP [label="P" pos="19.0,0.9999999999999998!" ]
+  nQ [label="Q" pos="19.5,0.0!" ]
+  nL [label="L" pos="17.0,0.9999999999999998!" ]
+  nS [label="S" pos="12.0,3.0!" ]
+  nE [label="E" pos="0.0,4.0!" ]
+  nC [label="C" pos="-4.0,3.0!" ]
+  nD [label="D" pos="-2.0,2.0!" ]
+  nB [label="B" pos="-6.0,2.0!" ]
+  nA [label="A" pos="-7.0,0.9999999999999998!" ]
+  nH -> nT 
+  nT -> nW 
+  nW -> nX 
+  nX -> nY 
+  nY -> nZ 
+  nW -> nM 
+  nM -> nP 
+  nP -> nQ 
+  nM -> nL 
+  nT -> nS 
+  nH -> nE 
+  nE -> nC 
+  nC -> nD 
+  nC -> nB 
+  nB -> nA 
+}
