@@ -14,6 +14,30 @@ Implement a binary search tree in `BST.h`. The class should be templated to acce
   - `getRootNode()` - Returns the root of the tree (set to `nullptr` for an empty tree).
   - `clear()` - Removes all nodes from the tree.
   - `size()` - Returns the number of nodes in the tree.
+- Bear in mind that you are allowed and expected to create your own helper functions to complete this assignment.
+
+## Using provided tests.cpp file
+
+The following example will run the first automatic test:
+```
+$ g++ tests.cpp -o tests
+$ ./tests 1
+```
+
+**The possible tests for this assignment are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, or all.**
+
+### A guide to what new functions each of the tests call:
+* Test 1: `insert()` for a simple tree
+* Test 2: `insert()` for a complex tree
+* Test 3: `remove()` a leaf node
+* Test 4: `remove()` a node that only has a left child
+* Test 5: `remove()` a node that only has a right child
+* Test 6: `remove()` a node that has two children and the iop is the left child
+* Test 7: `remove()` a node with two children where node's left child has a right subtree
+* Test 8: `remove()` the root node repeatedly until the tree is empty
+* Test 9: `contains()`
+* Test 10: `size()` and `clear()`
+* all: runs tests 1-10
 
 ## Grading
 
