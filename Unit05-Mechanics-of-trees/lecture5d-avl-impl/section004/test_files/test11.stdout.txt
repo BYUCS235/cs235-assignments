@@ -1,0 +1,19 @@
+--- Test 11 output ---
+
+                             8|4
+
+             4|3                            12|3
+
+     2|2             6|2            10|2            14|2
+
+ 1|1     3|1     5|1             9|1    11|1    13|1    15|1
+
+tree.contains(14) = true
+tree.contains(4) = true
+tree.contains(5) = true
+tree.contains(15) = true
+tree.contains(7) = false
+tree.contains(2) = true
+tree.contains(-3) = false
+tree.contains(17) = false
+tree.contains(35) = false

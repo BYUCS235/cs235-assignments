@@ -1,0 +1,29 @@
+--- Test 18 output ---
+
+tree.size() = 0
+
+tree.insert(1) = true
+tree.insert(2) = true
+tree.insert(3) = true
+tree.size() = 3
+
+tree.insert(1) = false
+tree.insert(3) = false
+tree.size() = 3
+
+tree.remove(2) = true
+tree.remove(1) = true
+tree.size() = 1
+
+tree.remove(1) = false
+tree.size() = 1
+
+tree.remove(3) = true
+tree.size() = 0
+
+tree.insert(5) = true
+tree.insert(7) = true
+tree.size() = 2
+
+tree.clear()
+tree.size() = 0

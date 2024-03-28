@@ -1,0 +1,27 @@
+--- Test 17 output ---
+
+                             5|4
+
+             3|3                             7|2
+
+     2|2             4|1             6|1                
+
+ 1|1                                                        
+
+tree.remove(6) = true
+
+``             3|3
+
+     2|2             5|2
+
+ 1|1             4|1     7|1;tree-after-remove;45``
+
+tree.insert(8) = true
+
+``                             3|4
+
+             2|2                             5|3
+
+     1|1                             4|1             7|2
+
+                                                         8|1;tree-after-insert;45``
