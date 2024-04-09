@@ -1,0 +1,11 @@
+digraph {
+  nn4a [label="n4a" pos="1.4,2.0!" label="4"]
+  n8 [label="8" pos="2.8,1.0!" ]
+  nn4b [label="n4b" pos="0.0,1.0!" label="4"]
+  n5 [label="5" pos="0.7,0.0!" ]
+  n7 [label="7" pos="-0.7,0.0!" ]
+  nn4a -> n8 
+  nn4a -> nn4b 
+  nn4b -> n5 
+  nn4b -> n7 
+}

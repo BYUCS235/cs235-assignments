@@ -1,0 +1,13 @@
+digraph {
+  nA [label="A" pos="1.4,2.0!" ]
+  nC [label="C" pos="2.8,1.0!" ]
+  nF [label="F" pos="2.0999999999999996,0.0!" ]
+  nB [label="B" pos="0.0,1.0!" ]
+  nD [label="D" pos="0.7,0.0!" ]
+  nE [label="E" pos="-0.7,0.0!" ]
+  nA -> nC 
+  nC -> nF 
+  nA -> nB 
+  nB -> nD 
+  nB -> nE 
+}

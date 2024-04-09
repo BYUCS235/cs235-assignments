@@ -1,0 +1,16 @@
+n1 [label=<1<br/><font point-size="10" color="red">1</font>>]
+n2[label=<2<br/><font point-size="10" color="red">2</font>>]
+n4 [label=<4<br/><font point-size="10" color="red">3</font>>]
+n3 [label=<3<br/><font point-size="10" color="red">4</font>>]
+n7 [label=<7<br/><font point-size="10" color="red">5</font>>]
+n8 [label=<8<br/><font point-size="10" color="red">6</font>>]
+n6 [label=<6<br/><font point-size="10" color="red">7</font>>]
+n5 [label=<5<br/><font point-size="10" color="red">8</font>>]
+
+n1 > n2
+n1 < n4
+n2 > n3
+n2 < n7
+n3 > n5
+n4 > n8
+n4 < n6

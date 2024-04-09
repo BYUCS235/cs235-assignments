@@ -1,0 +1,13 @@
+n4a [label="4"]
+n4b [label="4"]
+n5a [label="5"]
+n5b [label="5"]
+
+n4a > n5a
+n4a < n4b
+n5a > 9
+n5a < 6
+n4b > n5b
+n4b < 8
+n5a > 9
+n5a < 6

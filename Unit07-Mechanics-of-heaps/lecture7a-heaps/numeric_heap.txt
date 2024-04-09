@@ -1,0 +1,6 @@
+n4a [label="4"]
+n4b [label="4"]
+n4a > n4b
+n4a < 8
+n4b > 7
+n4b < 5

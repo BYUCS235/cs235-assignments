@@ -1,0 +1,6 @@
+n9 [label="9"]
+n6 [label="6"]
+n8 [label="8"]
+
+n9 > n6
+n9 < n8

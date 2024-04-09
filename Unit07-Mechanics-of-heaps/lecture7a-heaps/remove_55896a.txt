@@ -1,0 +1,7 @@
+n6 [label="6"]
+n5a [label="5"]
+n8 [label="8"]
+
+n6 > n5a
+n6 < n8
+n5a > 9

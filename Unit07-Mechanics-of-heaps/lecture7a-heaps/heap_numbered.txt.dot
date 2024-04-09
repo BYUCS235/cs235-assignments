@@ -1,0 +1,17 @@
+digraph {
+  nn1 [label="n1" pos="2.0,3.0!" label=<1<br/><font point-size="10" color="red">1</font>>]
+  nn4 [label="n4" pos="4.0,2.0!" label=<4<br/><font point-size="10" color="red">3</font>>]
+  nn6 [label="n6" pos="5.0,1.0!" label=<6<br/><font point-size="10" color="red">7</font>>]
+  nn8 [label="n8" pos="3.0,1.0!" label=<8<br/><font point-size="10" color="red">6</font>>]
+  nn2 [label="n2" pos="0.0,2.0!" label=<2<br/><font point-size="10" color="red">2</font>>]
+  nn7 [label="n7" pos="1.0,1.0!" label=<7<br/><font point-size="10" color="red">5</font>>]
+  nn3 [label="n3" pos="-1.0,1.0!" label=<3<br/><font point-size="10" color="red">4</font>>]
+  nn5 [label="n5" pos="-1.5,0.0!" label=<5<br/><font point-size="10" color="red">8</font>>]
+  nn1 -> nn4 
+  nn4 -> nn6 
+  nn4 -> nn8 
+  nn1 -> nn2 
+  nn2 -> nn7 
+  nn2 -> nn3 
+  nn3 -> nn5 
+}

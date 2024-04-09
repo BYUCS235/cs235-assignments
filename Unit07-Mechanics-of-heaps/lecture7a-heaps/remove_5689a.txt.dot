@@ -1,0 +1,7 @@
+digraph {
+  nn9 [label="n9" pos="0.7,1.0!" label="9"]
+  nn8 [label="n8" pos="1.4,0.0!" label="8"]
+  nn6 [label="n6" pos="0.0,0.0!" label="6"]
+  nn9 -> nn8 
+  nn9 -> nn6 
+}
