@@ -5,8 +5,8 @@
 class Timer {
     bool started;
     bool running;
-    std::__1::chrono::steady_clock::time_point start_time;
-    std::__1::chrono::steady_clock::time_point end_time;
+    std::chrono::system_clock::time_point start_time;
+    std::chrono::system_clock::time_point end_time;
 
 public:
     Timer() : started(false), running(false) {}
