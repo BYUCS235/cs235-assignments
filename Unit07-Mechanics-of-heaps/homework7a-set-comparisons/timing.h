@@ -2,36 +2,47 @@
 
 #include <chrono>
 
-class Timer {
+class Timer
+{
     bool started;
     bool running;
+#if __APPLE__
+    std::__1::chrono::steady_clock::time_point start_time;
+    std::__1::chrono::steady_clock::time_point end_time;
+#else
     std::chrono::system_clock::time_point start_time;
     std::chrono::system_clock::time_point end_time;
+#endif
 
 public:
     Timer() : started(false), running(false) {}
 
-    void start() {
+    void start()
+    {
         start_time = std::chrono::high_resolution_clock::now();
         started = true;
         running = true;
     }
 
-    void stop() {
+    void stop()
+    {
         end_time = std::chrono::high_resolution_clock::now();
         running = false;
     }
 
     template <class duration>
-    long long time() const {
+    long long time() const
+    {
         return std::chrono::duration_cast<duration>(((running) ? std::chrono::high_resolution_clock::now() : end_time) - start_time).count();
     }
 
-    long long nanoseconds() const {
+    long long nanoseconds() const
+    {
         return time<std::chrono::nanoseconds>();
     }
 
-    long long milliseconds() const {
+    long long milliseconds() const
+    {
         return time<std::chrono::milliseconds>();
     }
 };
