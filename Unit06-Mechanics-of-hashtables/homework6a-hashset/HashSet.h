@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstddef>
+
 template<class T>
 class HashSet {
 public:
@@ -27,7 +29,7 @@ public:
         // remove all elements from the set
     }
 
-    int size() const {
+    size_t size() const {
         // implement size here
         // return the number of elements in the set
     }
