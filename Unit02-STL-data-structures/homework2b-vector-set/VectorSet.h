@@ -22,7 +22,7 @@ public:
         // return true if item is removed and false if item wasn't in the set
     }
 
-    int size() const {
+    std::size_t size() const {
         // implement size here
 
         // return the number of items in the set
