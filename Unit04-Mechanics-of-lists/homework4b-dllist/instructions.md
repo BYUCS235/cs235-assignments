@@ -22,7 +22,7 @@ Write a Double Linked List class in `DLList.h`. The class should be templated on
   - `const T& back() const`: returns the `value` of the node at the back of the list
   - `const T& at(int index) const`: returns the `value` of the node at the given `index`
   - `bool contains(const T& item) const`: checks of the list contains a node with the given value (`item`)
-  - `int size() const`: returns the current size of the list
+  - `size_t size() const`: returns the current size of the list
   - `void clear()`: deletes every node in the list
 - Implement appropriate error handling
   - `front`, `back`, `pop_front`, and `pop_back` should throw an `std::length_error` if the list is empty

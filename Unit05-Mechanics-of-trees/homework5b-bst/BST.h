@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstddef>
+
 template<class T>
 class BST {
 public:
@@ -44,7 +46,7 @@ public:
         // remove all nodes from the tree
     }
 
-    int size() const {
+    size_t size() const {
         // implement size here
         // return the number of nodes in the tree
     }

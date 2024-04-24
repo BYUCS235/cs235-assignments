@@ -15,7 +15,7 @@ Create a singly linked list template class `SLList` in `SLList.h`.
   - `void push_back(T item)` - adds a new node with the given `item` to the end of the list
   - `void pop_back()` - removes the last node in the list
   - `const T& front() const` - returns a const reference to the value of the head node (assume list is not empty)
-  - `int size() const` - returns the current size of the list (i.e., the number of elements/nodes)
+  - `size_t size() const` - returns the current size of the list (i.e., the number of elements/nodes)
   - `void clear()` - removes all nodes from the list
 - You can assume that `pop_back` and `front` will only be called when the list is not empty
 - Do not use any existing C++ data structures (e.g., `std::list`, `std::vector`)
