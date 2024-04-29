@@ -16,7 +16,7 @@ Create a class template called `VectorSet` in the header file named `VectorSet.h
     - Removes `item` from the set if present
     - Returns true if the `item` has been removed
     - Returns false if the `item` is not found in the set
-  - `size_t size() const`
+  - `int size() const`
     - Returns the number of elements in the set
   - `bool empty() const`
     - Returns true if the set is empty

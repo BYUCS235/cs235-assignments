@@ -1,5 +1,4 @@
 #pragma once
-#include <cstddef>
 
 template <class T>
 class SLList {
@@ -31,7 +30,7 @@ public:
         // implement front here
     }
 
-    size_t size() const {
+    int size() const {
         // implement size here
     }
 

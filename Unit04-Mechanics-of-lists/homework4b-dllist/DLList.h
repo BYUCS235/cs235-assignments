@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <string>
-#include <cstddef>
 
 template<class T>
 class DLList {
@@ -68,7 +67,7 @@ public:
         // implement contains here
     }
 
-    size_t size() const {
+    int size() const {
         // implement size here
     }
 

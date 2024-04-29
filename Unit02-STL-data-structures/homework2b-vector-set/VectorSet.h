@@ -1,7 +1,5 @@
 #pragma once
 
-#include <cstddef>
-
 template<class T>
 class VectorSet {
 public:
@@ -24,7 +22,7 @@ public:
         // return true if item is removed and false if item wasn't in the set
     }
 
-    size_t size() const {
+    int size() const {
         // implement size here
 
         // return the number of items in the set

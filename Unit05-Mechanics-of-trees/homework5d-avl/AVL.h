@@ -1,7 +1,5 @@
 #pragma once
 
-#include <cstddef>
-
 template<class T>
 class AVL {
 public:
@@ -47,7 +45,7 @@ public:
         // remove all nodes from the tree
     }
 
-    size_t size() const {
+    int size() const {
         // implement size here
         // return the number of nodes in the tree
     }

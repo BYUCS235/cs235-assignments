@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include <string>
-#include <cstddef>
 
 template<class T>
 class Vector {
@@ -27,7 +26,7 @@ public:
         // implement operator[] here
     }
 
-    size_t size() const {
+    int size() const {
         // implement size here
     }
 

@@ -1,0 +1,3 @@
+Input must be greater than 0
+
+Error: The program returned a non-zero exit code: 1

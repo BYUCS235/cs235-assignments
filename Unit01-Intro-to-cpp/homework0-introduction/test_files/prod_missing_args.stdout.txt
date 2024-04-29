@@ -1,0 +1,3 @@
+prod requires 2 arguments
+
+Error: The program returned a non-zero exit code: 1

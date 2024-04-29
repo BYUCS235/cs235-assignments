@@ -12,7 +12,7 @@ Create a `Vector` class in `Vector.h`.
   - `void insert(T item, int position)`: Insert an item at a given position in the vector, shifting remaining elements to the right
   - `void remove(int position)`: Remove the item at the given position, shifting elements to the left. HINT: instead of trying to remove the item, think of overwriting it instead.
   - `T& operator[](int index)`: Access the item at the given index without bounds checking
-  - `size_t size() const`: Return the number of elements in the vector
+  - `int size() const`: Return the number of elements in the vector
   - `void clear()`: Clear the vector, making it empty
 - The class should automatically resize the array when necessary (we recommend doing this in a separate `grow()` function, though this is not required)
   - The capacity of the array should be **doubled** each time it is resized.

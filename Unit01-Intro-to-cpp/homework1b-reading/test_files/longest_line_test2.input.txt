@@ -1,0 +1,10 @@
+unix
+JavaScript Java Node.js pixel GPU HTML
+multithreading Unicode parallelism data Wi-Fi
+cryptography assembly kilobyte XML binary network hashing
+bug VM recursion
+compiler database byte TCP C++ Linux syntax encryption
+IoT syscall algorithm language terabyte I/O cloud OS queue
+OOP debugging
+VR IP API RAID
+Ethernet Windows LAN kernel GUI ML firewall SQL IDE virus
