@@ -1,8 +1,7 @@
 #include <iostream>
-using std::cout;
-using std::endl;
+using std::cout, std::endl;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    cout << "Hello Great World!" << endl;
 }
