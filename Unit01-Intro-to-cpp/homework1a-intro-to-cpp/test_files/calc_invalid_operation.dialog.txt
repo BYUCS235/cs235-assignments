@@ -1,3 +1,0 @@
-operation: asdf
-asdf isn't a valid operation
-operation: 

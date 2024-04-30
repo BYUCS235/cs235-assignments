@@ -1,9 +1,0 @@
-operation: subtract
-left operand: 9
-right operand: 5
-4
-operation: subtract
-left operand: 13
-right operand: 25
--12
-operation: 

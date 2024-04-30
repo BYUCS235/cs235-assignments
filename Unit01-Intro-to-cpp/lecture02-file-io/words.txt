@@ -1,3 +1,0 @@
-Hello.
-This file has some words in it.
-There should be 13 words.

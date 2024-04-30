@@ -1,9 +1,0 @@
-operation: add
-left operand: 1
-right operand: 2
-3
-operation: add
-left operand: 5
-right operand: -7
--2
-operation: 
