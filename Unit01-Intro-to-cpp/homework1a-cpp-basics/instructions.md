@@ -43,7 +43,7 @@ $ ./numbers_divisible_by 10 1 3
 The Collatz conjecture states that for any positive integer:
 
 - if the number is even, divide it by 2
-- if the numbers is odd, multiply it by 3
+- if the numbers is odd, multiply it by 3 and add 1
 
 and that by following these steps, all sequences will eventually reach 1.
 
