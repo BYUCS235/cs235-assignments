@@ -8,7 +8,7 @@ In this section, we will cover the style conventions for writing C++ code. These
 
 ## Case
 
-There are many different ways to name things in programming. For example, you can use camel case, snake case, or kebab case. 
+There are many different ways to name things in programming. For example, you can use snake case or camel case. 
 
 In this class, you are encouraged to use whichever case you prefer but make sure to be consistant from program to program. 
 
@@ -18,9 +18,9 @@ Is when you use lowercase letters and separate words with underscores. For examp
 
 ```c++
 // Snake case 
-auto this_is_an_variable = 'This is an variable';
+std::string pie_flavor = 'key lime';
 
-void this_is_a_function() {
+void get_flavors() {
     // code here
 }
 ```
@@ -31,14 +31,14 @@ Is when you use lowercase letters for the first word and uppercase letters for t
 
 ```c++
 // Camel case
-auto thisIsAnVariable = 'This is an variable';
+std::string pieFlavor = 'key lime';
 
-void thisIsAFunction() {
+void getFlavors() {
     // code here
 }
 ```
 
-Again in this class, we encourage you to use which
+Again in this class, we encourage you to use which ever case you prefer but make sure to be consistant from program to program.
  
 ## Brackets
 
@@ -290,4 +290,57 @@ double calculate_area(int radius, int side) {
 In the example above, the good example breaks the code into functions. Each function does one thing and is small and focused. The bad example does not break the code into functions.
 
 # General Example
+
+```c++
+#include <cstdlib>
+using std::atoi;
+
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include "where.h"
+
+void swap(int &first, int &second)
+// void swap(int first, int second)
+{
+    WHERE(first);
+    WHERE(second);
+    cout << "first: " << first << endl;
+    cout << "second: " << second << endl;
+    
+    cout << "swap first and second" << endl;
+    cout << "i.e. swap data at " << &first << " and " << &second << endl;
+    // The & operator gets the location of the variable
+
+    int tmp = first;
+    first = second;
+    second = tmp;
+    
+    cout << "first: " << first << endl;
+    cout << "second: " << second << endl;
+}
+
+int main(int argc, char **argv)
+{
+    int a = atoi(argv[1]);
+    int b = atoi(argv[2]);
+
+    WHERE(a);
+    WHERE(b);
+
+    cout << "a: " << a << endl;
+    cout << "b: " << b << endl;
+
+    swap(a, b);
+
+    WHERE(a);
+    WHERE(b);
+    
+    cout << "a: " << a << endl;
+    cout << "b: " << b << endl;
+}
+```
+
+In the example above, the code is broken into functions. Each function does one thing and is small and focused. The code is easy to read, understand, debug, and maintain.
 
