@@ -12,4 +12,5 @@ int main(int argc, char* argv[]) {
         total += token;
     }
     cout << "Total in " << argv[1] << " is " << total << endl;
+    file.close();
 }

@@ -9,6 +9,7 @@ void message(int num) {
     TRACK(num)
     std::cout << "message: " << SEVEN + num << std::endl;
     TRACE
+    BANANA 
 }
 
 int main() {

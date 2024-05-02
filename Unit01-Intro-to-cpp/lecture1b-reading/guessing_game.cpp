@@ -16,12 +16,9 @@ int main()
 
     while (guess != secret)
     {
-        string response;
         cout << "Guess: ";
-        if (!getline(cin, response)) {
-            cerr << "Input ran out!" << endl;
-            return 1;
-        } 
+        string response;
+        getline(cin, response);
         guess = stoi(response);
 
         if (guess < secret)

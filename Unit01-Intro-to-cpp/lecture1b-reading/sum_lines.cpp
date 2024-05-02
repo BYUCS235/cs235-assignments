@@ -15,8 +15,9 @@ using std::istringstream;
 int sum_line(string line)
 {
     TRACK(line)
+    // "1 2 3 40 72"
     istringstream line_stream(line); // line_stream = istringstream(line)
-    int total = 0;                  // leave off "= 0", what happens?
+    int total(0);                  // leave off "= 0", what happens?
     int num;
     while (line_stream >> num)
     {
