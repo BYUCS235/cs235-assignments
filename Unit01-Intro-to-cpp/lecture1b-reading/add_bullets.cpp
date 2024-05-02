@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    ifstream infile(argv[1]); // infile = ifstream(argv[1])
+    ifstream infile(argv[1]); //  same as:  ifstream infile = ifstream(argv[1])
     if (!infile.is_open())
     {
         cerr << "Unable to open file for reading: " << argv[1] << endl;
