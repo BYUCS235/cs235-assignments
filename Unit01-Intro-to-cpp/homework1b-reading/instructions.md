@@ -21,7 +21,7 @@ Read `cin` using `getline`, not `>>`.
 
 Because the `>>` operator ignores whitespace, using it makes it impossible to enter an empty string as an input for the operation.
 
-Look at [`guessing_game.cpp`](../lecture02-reading/guessing_game.cpp) for an example of how to use `getline` for this use-case.
+Look at [`guessing_game.cpp`](../lecture1b-reading/guessing_game.cpp) for an example of how to use `getline` for this use-case.
 
 **Example**
 
