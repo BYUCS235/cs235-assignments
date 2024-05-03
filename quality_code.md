@@ -281,30 +281,3 @@ double calculate_area(int radius, int side) {
 
 In the example above, the good example breaks the code into functions. Each function does one thing and is small and focused. The bad example does not break the code into functions.
 
-# General Example
-
-```c++
-#include <bits/stdc++.h>
-using namespace std;
- 
-// Driver code
-int main()
-{
-    int a = 1, b = 10, c = 4;
- 
-    // temporary variable where we assumed a is max
-    int max = a;
- 
-    if (max < b)
-        max = b;
-    if (max < c)
-        max = c;
- 
-    printf("%d is the maximum out of %d, %d, and %d", max,
-           a, b, c);
- 
-    return 0;
-}
-```
-
-In the example above, the code is well written. It uses good style and decomposition conventions. The code is easy to read, understand, debug, and maintain.
