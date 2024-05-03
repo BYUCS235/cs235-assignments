@@ -178,5 +178,5 @@ ERROR: can't open file_that_does_not_exist.txt
 | test2            | 6.5     |
 | test3            | 6.5     |
 | test4            | 6.5     |
-| **Sort**         | **15**   |
+| **Sort**         | **25**   |
 | **Total**        | **100**  |
