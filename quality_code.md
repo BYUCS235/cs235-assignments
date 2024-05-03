@@ -8,13 +8,11 @@ In this section, we will cover the style conventions for writing C++ code. These
 
 ## Case
 
-There are many different ways to name things in programming. For example, you can use snake case or camel case. 
-
-In this class, you are encouraged to use whichever case you prefer but make sure to be consistant from program to program. 
+It is common to see code in C++ using either snake case or camel case. You may use whichever convention you prefer, but make sure to be consistent.
 
 ### Snake case
 
-Is when you use lowercase letters and separate words with underscores. For example:
+Snake case is when you use lowercase letters and separate words with underscores. For example:
 
 ```c++
 // Snake case 
@@ -27,7 +25,7 @@ void get_flavors() {
 
 ### Camel case
 
-Is when you use lowercase letters for the first word and uppercase letters for the first letter of each subsequent word. For example:
+Camel case is when you use lowercase letters for the first word and uppercase letters for the first letter of each subsequent word. For example:
 
 ```c++
 // Camel case
@@ -42,9 +40,7 @@ Again in this class, we encourage you to use which ever case you prefer but make
  
 ## Brackets
 
-There are two conventions for brackets: K&R style and Allman style.
-
-Feel free to use either style, but be consistent from program to program.
+There are many conventions for brackets, but two are most common:: K&R style and Allman style. Feel free to use either style, but be consistent from program to program.
 
 ### K&R style
 
@@ -123,14 +119,16 @@ double calculateAreaOfCircle(int radius) {
 - Be descriptive with function arguments.
 
 ```c++
+#include <cmath>
+
 # Good
 def calculate_area_of_circle(int radius) {
-    return 3.14 * radius ** 2
+    return 3.14 * pow(radius, 2)
 }
 
 # Bad
 def calculate_area_of_circle(int foo) {
-    return 3.14 * foo ** 2
+    return 3.14 * pow(foo, 2)
 }
 ```
 
@@ -187,20 +185,14 @@ void function2() {
 }
 
 // REALLY BAD
-void function1() {
-    // code here
-}
+int function1() { return 7;} char function2() {
+return 'c';  
+   }
 
 
-void function2() {
-    // code here
-}
+void function3() 
+{ /* code */
 
-
-
-
-void function3() {
-    // code here
 }
 ```
 
@@ -292,55 +284,27 @@ In the example above, the good example breaks the code into functions. Each func
 # General Example
 
 ```c++
-#include <cstdlib>
-using std::atoi;
-
-#include <iostream>
-using std::cout;
-using std::endl;
-
-#include "where.h"
-
-void swap(int &first, int &second)
-// void swap(int first, int second)
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// Driver code
+int main()
 {
-    WHERE(first);
-    WHERE(second);
-    cout << "first: " << first << endl;
-    cout << "second: " << second << endl;
-    
-    cout << "swap first and second" << endl;
-    cout << "i.e. swap data at " << &first << " and " << &second << endl;
-    // The & operator gets the location of the variable
-
-    int tmp = first;
-    first = second;
-    second = tmp;
-    
-    cout << "first: " << first << endl;
-    cout << "second: " << second << endl;
-}
-
-int main(int argc, char **argv)
-{
-    int a = atoi(argv[1]);
-    int b = atoi(argv[2]);
-
-    WHERE(a);
-    WHERE(b);
-
-    cout << "a: " << a << endl;
-    cout << "b: " << b << endl;
-
-    swap(a, b);
-
-    WHERE(a);
-    WHERE(b);
-    
-    cout << "a: " << a << endl;
-    cout << "b: " << b << endl;
+    int a = 1, b = 10, c = 4;
+ 
+    // temporary variable where we assumed a is max
+    int max = a;
+ 
+    if (max < b)
+        max = b;
+    if (max < c)
+        max = c;
+ 
+    printf("%d is the maximum out of %d, %d, and %d", max,
+           a, b, c);
+ 
+    return 0;
 }
 ```
 
-In the example above, the code is broken into functions. Each function does one thing and is small and focused. The code is easy to read, understand, debug, and maintain.
-
+In the example above, the code is well written. It uses good style and decomposition conventions. The code is easy to read, understand, debug, and maintain.
