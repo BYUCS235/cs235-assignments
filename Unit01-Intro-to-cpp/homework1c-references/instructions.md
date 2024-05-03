@@ -168,15 +168,15 @@ ERROR: can't open file_that_does_not_exist.txt
 
 | Methods          | Points   |
 |------------------|----------|
-| no arguments     | 10       |
-| only lines       | 10       |
-| only input file  | 10       |
-| both arguments   | 10       |
-| not enough lines | 10       |
-| **Head**         | **50**   |
-| test1            | 12.5     |
-| test2            | 12.5     |
-| test3            | 12.5     |
-| test4            | 12.5     |
-| **Sort**         | **50**   |
+| no arguments     | 15       |
+| only lines       | 15       |
+| only input file  | 15       |
+| both arguments   | 15       |
+| not enough lines | 15       |
+| **Head**         | **75**   |
+| test1            | 6.5     |
+| test2            | 6.5     |
+| test3            | 6.5     |
+| test4            | 6.5     |
+| **Sort**         | **15**   |
 | **Total**        | **100**  |
