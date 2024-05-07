@@ -212,59 +212,6 @@ double area = 3.14*radius*radius;
 
 In the example above, the good example uses 1 space before and after operators. The bad example does not use spaces before and after operators.
 
-## Format Code
-
-In CLion you can format your code by pressing `Ctrl + Alt + L` on windows or `Cmd + Option + L` on mac or in VS Code you can press `Shift + Alt + F` on windows or `Shift + Option + F` on mac. This will format your code to the conventions you have set in your IDE.
-
-For example, in CLion it will turn this code:
-
-```c++
-int main() {
-int radius = 5;
-double area = calculate_area_of_circle(radius);
-std::cout << area << std::endl;
-
-return 0;
-}
-```
-
-into this code:
-
-```c++
-int main() {
-    int radius = 5;
-    double area = calculate_area_of_circle(radius);
-    std::cout << area << std::endl;
-
-    return 0;
-}
-```
-
-While in VS Code it will turn this code:
-
-```c++
-int main() {
-int radius = 5;
-double area = calculate_area_of_circle(radius);
-std::cout << area << std::endl;
-
-return 0;
-}
-```
-
-into this code:
-
-```c++
-int main()
-{
-    int radius = 5;
-    double area = calculate_area_of_circle(radius);
-    std::cout << area << std::endl;
-
-    return 0;
-}
-```
-
 # Decomposition
 
 In this section, we will cover the decomposition conventions for writing c++ code. Decomposition is the process of breaking your code into smaller, more manageable pieces. When you decompose your code, you make it easier to read, understand, debug, and maintain. Aspects of decomposition that we will cover include: `#include` statements, functions, and more.

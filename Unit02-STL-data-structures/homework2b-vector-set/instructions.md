@@ -46,6 +46,19 @@ s1.size() // Returns 0
 To remove an item from a vector, you can use something like:
 
 ```c++
+void _remove(size_t pos) {
+    // Swap item to back of vector
+    std::swap(_vec[pos], _vec[_vec.size() - 1]);
+    // Remove last item
+    _vec.pop_back();
+}
+```
+
+The example swaps the item and uses `pop_back()` to remove the last element from the vector. 
+
+Another way to do this could look like the following:
+
+```c++
 for (auto iter = _vec.begin(); iter != _vec.end(); iter++) {
     if (*iter == item) {
         _vec.erase(iter);
