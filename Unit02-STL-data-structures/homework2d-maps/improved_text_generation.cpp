@@ -1,9 +1,2 @@
-#include <iostream>
-#include <string>
-
-
-int main(int argc, char const* argv[]) {
-    // Write your code here
-
-    return 0;
-}
+// copy your functioning basic_text_generation.cpp
+// and add in your new features
