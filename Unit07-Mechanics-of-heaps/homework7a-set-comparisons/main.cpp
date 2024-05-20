@@ -8,19 +8,21 @@
 
 #include <set>
 #include <unordered_set>
-#include "VectorSet.h"
-#include "BST.h"
-#include "AVL.h"
-#include "HashSet.h"
+// #include "VectorSet.h"
+// #include "BST.h"
+// #include "AVL.h"
+// #include "HashSet.h"
 
-int main(int argc, char* argv[]) {
-    std::srand(std::time(nullptr));
+template<class S>
+void run_performance() {
     std::array<int, 5> numbers_of_data{ 1000, 10000, 100000, 1000000, 10000000 };
+    
     Timer timer;
 
     // choose an implementation of a set by uncommenting the appropriate line
     // below
-    std::set<int> set;
+    S set;
+
     // std::unordered_set<int> set;
     // VectorSet<int> set;
     // BST<int> set;
@@ -48,5 +50,16 @@ int main(int argc, char* argv[]) {
         std::cout << std::setw(12) << std::right << timer.milliseconds() << "ms" << std::endl;
     }
 
+}
+
+int main(int argc, char* argv[]) {
+    std::srand(std::time(nullptr));
+    
+    run_performance<std::set<int>>();
+    run_performance<std::unordered_set<int>>();
+
     return 0;
 }
+
+
+
