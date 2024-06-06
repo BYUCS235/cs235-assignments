@@ -5,7 +5,7 @@ using std::endl;
 void nom() {
     // This function puts a 7 on the heap. That's all.
     long long* foo = new long long(7);
-    delete foo;
+    // delete foo;
 }
 
 int main() {

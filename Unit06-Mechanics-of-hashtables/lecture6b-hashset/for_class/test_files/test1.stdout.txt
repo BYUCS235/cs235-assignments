@@ -1,0 +1,16 @@
+--- Test 1 output ---
+
+set.insert(1) = true
+set.insert(2) = true
+set.insert(3) = true
+set.insert(4) = true
+set.insert(5) = true
+
+set.insert(1) = false
+set.insert(2) = false
+set.insert(3) = false
+set.insert(4) = false
+set.insert(5) = false
+
+set.insert(6) = true
+set.insert(6) = false

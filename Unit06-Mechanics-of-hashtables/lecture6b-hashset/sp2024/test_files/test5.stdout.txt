@@ -1,0 +1,4 @@
+--- Test 5 output ---
+
+set.insert(0...999)
+assert set.contains(i) for all i 0...999

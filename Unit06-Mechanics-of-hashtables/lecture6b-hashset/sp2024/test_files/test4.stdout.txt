@@ -1,0 +1,32 @@
+--- Test 4 output ---
+
+set.size() = 0
+
+set.insert(laughter) = true
+set.insert(freedom) = true
+set.insert(igloo) = true
+set.size() = 3
+
+set.insert(laughter) = false
+set.insert(igloo) = false
+set.size() = 3
+
+set.remove(freedom) = true
+set.remove(igloo) = true
+set.size() = 1
+
+set.remove(igloo) = false
+set.size() = 1
+
+set.clear()
+set.size() = 0
+
+set.insert(elephant) = true
+set.insert(violin) = true
+set.size() = 2
+
+set.contains(laughter) = false
+set.contains(freedom) = false
+set.contains(igloo) = false
+set.contains(elephant) = true
+set.contains(violin) = true

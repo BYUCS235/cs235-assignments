@@ -24,26 +24,19 @@ this assignment's folder. `main.cpp`, which has the code that times the insert
 operations, `#include`s all four files, so it will not be able to compile
 without them. However, if you have not completed any of these assignments,
 simply delete the `#include` directive in `main.cpp` that includes the
-assignment's header. After that, you should be able to compile `main.cpp` with
+assignment's header and remove the associated lines in the `main` method. 
+
+After that, you should be able to compile `main.cpp` with
 the following command:
 
 ```console
-$ g++ -Wall -std=c++17 -o time main.cpp
+$ g++ -Wall -std=c++17 -o perf main.cpp
 ```
 
-and run it with the command below. The output is a table showing the time it
-took to insert the specified number of elements into the set:
+The output is a table showing the time it
+took to insert the specified number of elements into 
+each set implementation for both *sequential* data and *random* data.
 
-```console
-$ ./time
-    N       Time to insert
----------- ----------------
-     1000              0ms
-    10000              9ms
-   100000             56ms
-  1000000            376ms
- 10000000           4192ms
-```
 
 ### A couple of notes:
 
@@ -56,63 +49,35 @@ $ ./time
   do a comparison. Fear not -- just do comparisons among the implementations of
   sets that you do have.
 
+* Empirical measurements of runtime are always noisy. Specific runtimes can be influenced
+  by whether other things are running at the same time (did your email client check your
+  email while the test was running?) as well as the current state of your operating system.
+  It's not a bad idea to run the tests a few times in order to get a feel for how each 
+  implementation actually performs.
+
 ## Running the test
 
-Once you have gotten `main.cpp` to compile, run it for the 6 different
-implementations of sets. To do this, you'll need to uncomment a line in
-`main.cpp`. When you get `main.cpp`, you should see lines that look like this:
+Fill in the following table after you run the tests. 
+Fill out the table for both the sequential and the random data.
 
-```cpp
-// choose an implementation of a set by uncommenting the appropriate line
-// below
-std::set<int> set;
-// std::unordered_set<int> set;
-// VectorSet<int> set;
-// BST<int> set;
-// AVL<int> set;
-// HashSet<int> set;
-```
+| N   | `std::set` | `std::unordered_set` | `VectorSet` | `BST` | `AVL` | `HashSet` |
+| --- | ---------- | -------------------- | ----------- | ----- | ----- | --------- |
+|     |            |                      |             |       |       |           |
+|     |            |                      |             |       |       |           |
+|     |            |                      |             |       |       |           |
+|     |            |                      |             |       |       |           |
+|     |            |                      |             |       |       |           |
 
-Since all these lines declare a variable named `set` and thus conflict, only one
-can be uncommented at a time. To choose a set to test, uncomment the line
-declaring `set` to be of the type that you want to test, then recompile and run
-it again. **You must recompile for the change to take effect! If you don't, the
-executable from the last compilation will run, testing the set that you already
-tested.**
-
-Fill in the following table as you run the tests. If any of the implementations
+If any of the implementations
 is taking an inordinate amount of time (e.g., several minutes) to complete, you
-can just consider the smaller sizes of N that completed and mark the bigger
-sizes that didn't finish as TSTT (too slow to test).
+can put a limit on the size of `N` passed to that data structure. 
+For example, to limit your `VectorSet` to `N < 12000`:
 
-| N | `std::set` | `std::unordered_set` | `VectorSet` | `BST` | `AVL` | `HashSet` |
-|------------|---|---|---|---|---|---|
-| 1,000      |   |   |   |   |   |   |
-| 10,000     |   |   |   |   |   |   |
-| 100,000    |   |   |   |   |   |   |
-| 1,000,000  |   |   |   |   |   |   |
-| 10,000,000 |   |   |   |   |   |   |
-
-Additionally, you should go through this process (testing all set
-implementations and recording their runtimes in the table) twice: once for
-sequential data (inserting 0..N in order) and once for random data (inserting N
-random numbers). To do this, you'll need to modify `main.cpp` again. In
-`main.cpp`, inside two nested `for` loops, there should be lines that look like
-this:
-
-```cpp
-// choose whether to insert sequential or random data by
-// uncommenting the appropriate line below
-
-// SEQUENTIAL DATA
-set.insert(i);
-
-// RANDOM DATA
-// set.insert(rand());
+```c++
+run_performance<VectorSet<int>>("VectorSet", true, 12000);
 ```
 
-Choose whether to insert sequential or random data by uncommenting the
-appropriate line. Remember to recompile after modifying `main.cpp`!
+In the table above, simply put **TSTT** (too slow to test) in the appropriate cells.
 
 ## Comparing Results
 
