@@ -114,9 +114,17 @@ int main()
     cout << "Size should be 0: " << list.size() << endl;
     list.push_back(7);
     list.push_back(8);
+    
+    // This...
     for (auto item : list) {
         cout << item << endl;
     }
+
+    // ...is equivalent to this
+    for (SLList<int>::iterator iter = list.begin(); iter != list.end(); ++iter) {
+        cout << *iter << endl;
+    }
+    
     cout << "Size should be 2: " << list.size() << endl;
     list.clear();
     cout << "Size should be 0: " << list.size() << endl;
