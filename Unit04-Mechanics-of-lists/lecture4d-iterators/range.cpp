@@ -12,14 +12,13 @@ class Range {
 
     class iterator {
         int current;
-        int upper;
         int step;
         public:
-        iterator(int lower, int upper, int step) : current(lower), upper(upper), step(step) {}
+        iterator(int start, int step) : current(start), step(step) {}
 
         bool operator !=(iterator const& other) {
             // Should I keep going?
-            return current < upper;
+            return current < other.current;
         }
 
         // Define ++ to move from the current position to the next one
@@ -35,12 +34,11 @@ class Range {
     };
 
     iterator begin() const {
-        return iterator(lower, upper, step);
+        return iterator(lower, step);
     }
 
     iterator end() const {
-        // What we return here doesn't matter, as this iterator is essentially ignored
-        return iterator(0, 0, 0);
+        return iterator(upper, 0);
     }
 };
 
