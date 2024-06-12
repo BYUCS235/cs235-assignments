@@ -13,7 +13,7 @@ public:
     };
 
     AVL() {
-        // implement the contructor here
+        // implement the constructor here
     }
 
     ~AVL() {
