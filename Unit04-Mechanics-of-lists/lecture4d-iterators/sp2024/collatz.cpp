@@ -14,8 +14,9 @@ class Collatz {
 
         iterator(int n) : _current(n) {}
         public:
-        bool operator !=(iterator const& other) {
-            return _current != 1;
+
+        bool operator !=(iterator const& end) {
+            return _current != end._current;
         }
 
         iterator& operator++() {
@@ -36,7 +37,7 @@ class Collatz {
         return iterator(start);
     }
     iterator end() {
-        return iterator(-1);  //ignored
+        return iterator(1);  
     }
 };
 

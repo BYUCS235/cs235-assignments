@@ -4,6 +4,7 @@ def prod(a: int, b: int):
             yield i, j
 
 
+
 def main(a: int, b: int):
     for pair in prod(a, b):
         print(pair)

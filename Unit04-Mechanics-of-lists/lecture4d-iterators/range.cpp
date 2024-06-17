@@ -16,9 +16,9 @@ class Range {
         public:
         iterator(int start, int step) : current(start), step(step) {}
 
-        bool operator !=(iterator const& other) {
+        bool operator !=(iterator const& end) {
             // Should I keep going?
-            return current < other.current;
+            return current < end.current;
         }
 
         // Define ++ to move from the current position to the next one
